@@ -18,22 +18,34 @@ html,body {
 
   text-align: center;
 }
+#main p{
+    text-align: left;
+}
+
 #focaccia {
-  width: 50%;
+
+  text-align: center;
+  margin: 0 auto;
 }
 #focaccia,
 img {
-  border-radius: 5%;
+  border-radius: 10px;
+  
 }
 section{
-    margin-left: 25%;
-    border-left: #fee6a8 1px solid;
-    padding:2%
+    margin-left: 26%;
+    border-left: #fee6a8 2px solid;
+    padding-left:10px;
     
 }
 
 section,#feat{
   text-align: left;
+}
+section p{
+    margin-top: 50px;
+    color:#b74a14;
+    line-height: 1px;
 }
 #featMethod {
   text-align: left;
