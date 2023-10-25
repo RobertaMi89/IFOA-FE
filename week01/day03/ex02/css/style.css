@@ -1,0 +1,40 @@
+html,body {
+  width: 100%;
+ 
+  text-align: center;
+}
+
+#border {
+  background-color: #fdfbf1;
+  border-top: #fee6a8 1px solid;
+}
+#border,p {
+  width: 100%;
+}
+
+#main {
+  width: 50%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+#focaccia {
+  width: 50%;
+}
+#focaccia,
+img {
+  border-radius: 5%;
+}
+section{
+    margin-left: 25%;
+    border-left: #fee6a8 1px solid;
+    padding:2%
+    
+}
+
+section,#feat{
+  text-align: left;
+}
+#featMethod {
+  text-align: left;
+}
