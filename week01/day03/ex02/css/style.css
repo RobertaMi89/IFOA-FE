@@ -5,6 +5,7 @@ html,body {
 }
 
 #border {
+padding-bottom: 3px;
   background-color: #fdfbf1;
   border-top: #fee6a8 1px solid;
 }
@@ -27,13 +28,18 @@ html,body {
   text-align: center;
   margin: 0 auto;
 }
-#focaccia,
-img {
+#focaccia img {
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+  width: 50vw;
   
 }
+#focaccia img, figcaption{
+    margin-top: 10px;
+    color: grey;
+}
 section{
-    margin-left: 26%;
+    margin-left: 25%;
     border-left: #fee6a8 2px solid;
     padding-left:10px;
     
@@ -41,12 +47,23 @@ section{
 
 section,#feat{
   text-align: left;
+  margin: 0 auto;
+  width: 50%;
+
 }
 section p{
     margin-top: 50px;
     color:#b74a14;
     line-height: 1px;
 }
+a{
+    color: #409191;
+}
 #featMethod {
   text-align: left;
+  margin: 0 auto;
+  width: 50%;
+}
+#description{
+    padding-left: 1.5em ;
 }
