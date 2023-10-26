@@ -1,5 +1,6 @@
 /* IMPOSTAZIONI GENERALI */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
 body{
     background-image:url(../img/sfondo.png);
     font-family: 'Poppins', sans-serif;
@@ -13,7 +14,6 @@ body{
 header{
     text-align: center;
     padding: 20px;
-    
 }
 header img{
     width:30%
@@ -35,7 +35,6 @@ ul li img::before{
     content:url(../img/star-solid.svg);
     width:5px;
 }
-
 ul li img{
     width:5px;
     padding:5px;
@@ -44,6 +43,7 @@ ul li img{
 /* MAIN */
 #sfondo{
     background-color: white;
+    padding-bottom: 20px;
 }
 main{
     padding:10px;
@@ -51,7 +51,6 @@ main{
 .grey{
     color:#a1a397;
 }
-
 main img{
     width: 14px;
     padding-right: 5px;
@@ -64,19 +63,60 @@ main span{
     border: 1px solid grey;
     border-radius: 5px;
 }
-table tbody{
+
+/*TABLE*/
+table{
+    border-collapse: separate;
+    border-spacing: 0.8px;
     text-align: center;
+    border-bottom:3px solid#3766c8;
+}
+table tbody th{
+    font-weight: normal;
+    background-color: #3766c8;
+    box-sizing: border-box;
+    padding:20px;
+    color:white
+}
+table td{
+    padding:10px;  
+}
+table tr:nth-child(odd){
+    background-color: #eeeeee;
 }
 
-
-/* ELEMENTI NEL MAIN - ARTICLE */
-
-/* TABELLE */
+/* ELEMENTI NEL MAIN - ARTICLE VIDEO */
+#test{
+    padding: 20px,20px;
+}
+#test p a{
+    text-decoration: none;
+    color:#76cce0;
+}
+#test iframe{
+    width: 100%;
+    border-radius: 20px;
+}
 
 /* FORM */
 
-/* ELEMENTI NELL' ASIDE */
 
+
+
+/* ELEMENTI NELL' ASIDE */
+section{
+
+}
+section h3{
+    text-align: center;
+}
+aside h3{
+    text-align: center;
+}
+.boxGrey{
+    margin: 10px;
+    background-color: #e3e3e3;
+}
 /* FOOTER */
 #boxFooter{
     background: linear-gradient(0deg, rgba(44,53,56,1) 0%, rgba(0,85,102,1) 60%);
