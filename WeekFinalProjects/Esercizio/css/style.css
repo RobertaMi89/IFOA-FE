@@ -1,0 +1,168 @@
+/*monserrat 700
+open tutta la famiglia*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+html,body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color:#25a2c3;
+    line-height: 1;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+/*LOGO*/
+header{
+    background-color: black;
+    text-align: center;
+    width: 90%;
+    padding:8%;
+ 
+}
+header img{
+    width: 50%;
+}
+/*MAIN --- CONTENUTO 1 + FOTO*/
+#main{
+    margin-top: 0%;
+    width: 100%;
+}
+#cont1{
+    margin:0;
+    background-image:url(../images/banner.jpg);
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    
+}
+h1{
+    color: #25a2c3 ;
+    margin:0;
+    padding:12%;
+    line-height: 1;
+}
+#cont1 p{
+    margin-top: -8%;
+     
+}
+#bottone{
+    text-align: center;
+    padding-bottom: 10%;
+}
+#bottone a{
+    text-decoration: none;
+    color: white;
+
+}
+button{
+    background-color: #f04c2f ;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding:12px 30px;
+    border-radius: 5px;
+    border-color:transparent;
+}
+#cont1 button{
+   
+}
+/*GRANDE BOX BIANCO*/
+#boxBianco h3{
+    padding-top: 5%;
+}
+#boxBianco img{
+    border-radius: 50%;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+/*CONTENUTO 2 ORANGE*/
+
+#cont2{
+    background-color:#e22d0e;
+    padding-top: 10%;
+    padding-bottom: 6%;
+  
+}
+#cont2, h2{
+    color: white;
+}
+#cont2 cite{
+    text-align: center;
+    display: block;
+   
+}
+#cont2 #size{
+    font-size: 16px;
+    line-height: 3%;
+}
+
+/*CONTENUTO 3 + CARDS*/
+#card1,#card2,#card3{
+    display: inline-block;
+    margin:5%;
+    vertical-align: top;
+    border: 1px solid #dee1e3;
+    padding-bottom: 5%;
+}
+    
+#cont3 #pc1,#pc2,#pc3{
+    width: 100%;
+}
+#cont3{
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+}
+#cont3 h5{
+    margin: 0;
+    padding-top: 5%;
+}
+#cont3 img{
+    width: 100%;
+}
+#cont3 p{
+    font-size: 19px;
+    padding:5%;
+    margin:0%;
+}
+
+/*FOOTER*/
+footer{
+    padding:5%;
+    margin-top: 10%;
+    text-align: center;
+    background-color:#25a2c3;
+    color:#c8e7f0;
+    
+}
+footer h3{
+    color: white;
+}
+footer a{
+    color:#c8e7f0;
+}
+footer hr{
+    width: 45%;
+    line-height: normal;
+}
+footer address{
+    font-style: unset;
+    font-size: 0.8em;
+}
+footer #via{
+    margin-top: 0;
+
+}
+footer #copyright{
+    font-size: 0.6em;
+}
