@@ -2,6 +2,7 @@
 open tutta la famiglia*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 html,body{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
@@ -27,11 +28,11 @@ header{
     text-align: center;
     width: 90%;
     padding:8%;
- 
 }
 header img{
     width: 50%;
 }
+
 /*MAIN --- CONTENUTO 1 + FOTO*/
 #main{
     margin-top: 0%;
@@ -43,7 +44,6 @@ header img{
     background-size: cover;
     background-position-x: center;
     width: 100%;
-    
 }
 h1{
     color: #25a2c3 ;
@@ -52,8 +52,7 @@ h1{
     line-height: 1;
 }
 #cont1 p{
-    margin-top: -8%;
-     
+    margin-top: -8%;   
 }
 #bottone{
     text-align: center;
@@ -62,7 +61,6 @@ h1{
 #bottone a{
     text-decoration: none;
     color: white;
-
 }
 button{
     background-color: #f04c2f ;
@@ -72,9 +70,7 @@ button{
     border-radius: 5px;
     border-color:transparent;
 }
-#cont1 button{
-   
-}
+
 /*GRANDE BOX BIANCO*/
 #boxBianco h3{
     padding-top: 5%;
@@ -85,13 +81,12 @@ button{
     width: 80%;
     margin-left: 10%;
 }
-/*CONTENUTO 2 ORANGE*/
 
+/*CONTENUTO 2 ORANGE*/
 #cont2{
     background-color:#e22d0e;
     padding-top: 10%;
     padding-bottom: 6%;
-  
 }
 #cont2, h2{
     color: white;
@@ -99,9 +94,7 @@ button{
 #cont2 cite{
     text-align: center;
     display: block;
-    font-size: 20px;
-
-   
+    font-size: 20px;  
 }
 #cont2 #size{
     font-size: 16px;
@@ -109,7 +102,7 @@ button{
 }
 
 /*CONTENUTO 3 + CARDS*/
-#card1,#card2,#card3{
+.card{
     display: inline-block;
     margin:5%;
     vertical-align: top;
@@ -117,7 +110,7 @@ button{
     padding-bottom: 5%;
 }
     
-#cont3 #pc1,#pc2,#pc3{
+#cont3 .pc{
     width: 100%;
 }
 #cont3{
@@ -144,8 +137,7 @@ footer{
     margin-top: 10%;
     text-align: center;
     background-color:#25a2c3;
-    color:#c8e7f0;
-    
+    color:#c8e7f0; 
 }
 footer h3{
     color: white;
@@ -163,7 +155,6 @@ footer address{
 }
 footer #via{
     margin-top: 0;
-
 }
 footer #copyright{
     font-size: 0.6em;
