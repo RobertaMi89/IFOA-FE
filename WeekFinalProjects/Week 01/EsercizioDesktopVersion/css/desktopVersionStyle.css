@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body{
+    font-family: 'Open sans',sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.65em;
+    color: #393d41 ;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+header{
+    background-color: black;
+    padding:30px;
+}
+header img{
+    width: 15%;
+}
+
+/*MAIN*/
+#main{
+    text-align: center;
+}
+/*CONTENUTO 1 + FOTO*/
+#cont1{
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    padding: 150px;
+}
+#cont1 h1{
+    margin: 10px;
+    color: #25a2c3 ;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+}
+#cont1 p{
+    margin:0 15% 0 15%;
+}
+button{
+    background-color: #f04c2f ;
+    font-family: 'Montserrat', sans-serif;
+    padding:12px 30px;
+    border-radius: 5px;
+    border-color:transparent;
+    margin-top: 50px;;
+}
+button a{
+    color:white;
+    text-decoration: none;
+}
+/*BOX BIANCO*/
+#boxBianco h3 p{
+    width: 50%;
+  
+}
+#boxBianco img{
+    border-radius: 50%;
+}
+/*CONTENUTO 3 + CARDS*/
+#cont3{
+    margin: 0 auto;
+    width: 85%;
+}
+.card{
+    display: inline-block;
+    margin:5%;
+    vertical-align: top;
+    border: 1px solid #dee1e3;
+    padding-bottom: 5%;
+    vertical-align: top;
+   
+}
