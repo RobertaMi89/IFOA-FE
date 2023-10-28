@@ -1,10 +1,8 @@
 /* IMPOSTAZIONI GENERALI */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
     background-image:url(../img/sfondo.png);
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif;
 }
 #boxBlu, #sfondo, #boxFooter{
     box-shadow: rgba(0, 0, 0, 1) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -12,6 +10,7 @@ body{
 }
 /* HEADER */
 header{
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding: 20px;
 }
@@ -44,16 +43,13 @@ ul li img{
 #sfondo{
     background-color: white;
     padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 main{
     padding:10px;
 }
 .grey{
     color:#a1a397;
-}
-main img{
-    width: 14px;
-    padding-right: 5px;
 }
 main p b{
     color:#aa2072;
@@ -100,12 +96,21 @@ table tr:nth-child(odd){
 
 /* FORM */
 
-
-
+input{
+    padding:5px;
+    border: none;
+    border-bottom-style:dashed;
+}
+button{
+    padding:5px;
+    border: none;
+    background-color: #3766c8;
+    color:white;
+}
 
 /* ELEMENTI NELL' ASIDE */
-section{
-
+.title a{
+    color:#19a5cb;
 }
 section h3{
     text-align: center;
@@ -116,9 +121,21 @@ aside h3{
 .boxGrey{
     margin: 10px;
     background-color: #e3e3e3;
+    padding:10px 20px 10px 20px;
+}
+.data{
+    text-align: right;
 }
 /* FOOTER */
+footer{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+}
 #boxFooter{
     background: linear-gradient(0deg, rgba(44,53,56,1) 0%, rgba(0,85,102,1) 60%);
-
+    padding:10px 10px 30px 15px;
+    text-align: center;
+}
+footer a{
+    color:#FE00FD;
 }
