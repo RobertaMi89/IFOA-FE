@@ -20,13 +20,14 @@ header img{
 
 /*MAIN*/
 #main{
-    text-align: center;
+   
 }
 /*CONTENUTO 1 + FOTO*/
 #cont1{
     background-image: url(../img/banner.jpg);
     background-size: cover;
     padding: 150px;
+    text-align: center;
 }
 #cont1 h1{
     margin: 10px;
@@ -43,31 +44,112 @@ button{
     padding:12px 30px;
     border-radius: 5px;
     border-color:transparent;
-    margin-top: 50px;;
+    margin-top: 50px;
 }
 button a{
     color:white;
     text-decoration: none;
 }
 /*BOX BIANCO*/
+#boxBianco h3{
+    color: #25a2c3 ;
+
+}
 #boxBianco h3 p{
-    width: 50%;
-  
+    text-align: left;
 }
 #boxBianco img{
+    width:35%;
     border-radius: 50%;
+    float:left;
+    margin:50px;
 }
+#vertical{
+    padding:0 150px 0 150px;
+}
+#margine{
+    padding-top: 50px;
+}
+
+/*CONTENUTO 2*/
+#cont2{
+    margin-top: 100px;
+    background-color:#e22d0e;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+#cont2, h2{
+    color: white;
+}
+#cont2 cite{
+    text-align: center;
+    display: block;
+    font-size: 20px;  
+}
+#cont2 #size{
+    font-size: 12px;
+    line-height: 3px;
+}
+
 /*CONTENUTO 3 + CARDS*/
 #cont3{
-    margin: 0 auto;
-    width: 85%;
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+}
+#cont3 .pc{
+    width: 100%;
+}
+#cont3 h5{
+    margin: 0;
+    padding-top: 5%;
+}
+#cont3 img{
+    width: 100%;
+}
+#cont3 p{
+    font-size: 19px;
+    padding:5%;
+    margin:0;
 }
 .card{
     display: inline-block;
-    margin:5%;
     vertical-align: top;
     border: 1px solid #dee1e3;
-    padding-bottom: 5%;
-    vertical-align: top;
-   
+    width: 25%;
+}
+
+/*FOOTER*/
+footer{
+    margin-top: 100px;
+    padding:100px 200px 100px 200px;
+    text-align: left;
+    background-color:#25a2c3;
+    color:#c8e7f0; 
+}
+#centro{
+    padding-left: 45%;
+}
+footer h2{
+    color: white;
+    font-size: 2em;
+}
+footer a{
+    color:#c8e7f0;
+}
+footer hr{
+    width: 100%;
+    line-height: normal;
+    text-align: left;
+}
+footer address{
+    font-style: unset;
+    font-size: 0.8em;
+}
+footer #via{
+    margin-top: 0;
+}
+footer #copyright{
+    font-size: 0.6em;
 }
