@@ -67,8 +67,7 @@ let ex7=document.write("<h2>ESERCIZIO 7</h2>");
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 let nome1="john";
-let nome2="John";
-nome2= nome2.toLowerCase()
-let verifica = nome1==nome2;
+let nome2="John".toLowerCase();
+let verifica = nome1===nome2;
 document.write("i due valori sono uguali anche se le iniziali non sono le stesse "+verifica);
 
