@@ -80,6 +80,7 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
     let ex6=document.write("<h2>ESERCIZIO 6</h2>");
     let prod=14;
+    
     let promo=(prod-(prod*20/100)+"<br>");
     document.write("il prodotto è scontanto del 20%= "+promo);
     if (totalShoppingCart>=50){
@@ -100,6 +101,26 @@
     let num7=6;
     let num8=3;
     
+    if(num6>=num7){
+      if(num8>=num6){
+        document.getElementById("primo").innerHTML=num8;
+        document.getElementById("primo").innerHTML=num6;
+        document.getElementById("primo").innerHTML=num7;
+        document.write(num8,num6,num7);
+      }else{
+        if(num8>=num7){
+        document.getElementById("primo").innerHTML=num6;
+        document.getElementById("primo").innerHTML=num8;
+        document.getElementById("primo").innerHTML=num7;
+        document.write(num6,num8,num7);
+        }else{
+        document.getElementById("primo").innerHTML=num6;
+        document.getElementById("primo").innerHTML=num7;
+        document.getElementById("primo").innerHTML=num8;
+        document.write(num6,num7,num8);
+        }
+      }
+    }
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -170,12 +191,14 @@
     cognome: 'Doe',
     skills: ['javascript', 'html', 'css'],
     persona:true
-    }
+    };
     document.getElementById('nome').innerHTML = persona.nome;
     document.getElementById('cognome').innerHTML = persona.cognome;
     document.getElementById('skills').innerHTML = persona.skills;
 
-    persona.city="Toronto";
+    document.write(persona.nome+" ",persona.cognome+" ",persona.skills);
+    document.write(persona.city="Toronto");
+    document.getElementById('city').innerHTML += persona.city;
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -183,3 +206,8 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
     let ex12=document.write("<h2>ESERCIZIO 12</h2>");
+
+    document.write(persona.nome+" ",persona.cognome+" ",persona.skills+" "+persona.city);
+    
+    delete persona.cognome;
+    document.getElementById('eliminata').innerHTML += persona.cognome;
