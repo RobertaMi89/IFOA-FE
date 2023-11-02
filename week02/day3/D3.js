@@ -237,8 +237,10 @@ for (let i = 0; i < characters.length; i++) {
       characters.splice(i, 1);
     }
   }
-}
+}/*matrice bidimensionale for dentro un for*/ 
 console.log("CHARACTERS WITHOUT FEMALE", characters.length);
+
+
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
