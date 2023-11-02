@@ -101,26 +101,37 @@
     let num7=6;
     let num8=3;
     
-    if(num6>=num7){
-      if(num8>=num6){
-        document.getElementById("primo").innerHTML=num8;
-        document.getElementById("primo").innerHTML=num6;
-        document.getElementById("primo").innerHTML=num7;
-        document.write(num8,num6,num7);
-      }else{
-        if(num8>=num7){
-        document.getElementById("primo").innerHTML=num6;
-        document.getElementById("primo").innerHTML=num8;
-        document.getElementById("primo").innerHTML=num7;
-        document.write(num6,num8,num7);
-        }else{
-        document.getElementById("primo").innerHTML=num6;
-        document.getElementById("primo").innerHTML=num7;
-        document.getElementById("primo").innerHTML=num8;
-        document.write(num6,num7,num8);
-        }
-      }
-    }
+    // if(num6>=num7){
+    //   if(num8>=num6){
+    //     document.getElementById("primo").innerHTML=num8;
+    //     document.getElementById("primo").innerHTML=num6;
+    //     document.getElementById("primo").innerHTML=num7;
+    //     document.write(num8,num6,num7);
+    //   }else{
+    //     if(num8>=num7){
+    //     document.getElementById("primo").innerHTML=num6;
+    //     document.getElementById("primo").innerHTML=num8;
+    //     document.getElementById("primo").innerHTML=num7;
+    //     document.write(num6,num8,num7);
+    //     }else{
+    //     document.getElementById("primo").innerHTML=num6;
+    //     document.getElementById("primo").innerHTML=num7;
+    //     document.getElementById("primo").innerHTML=num8;
+    //     document.write(num6,num7,num8);
+    //     }
+    //   }
+    // }
+// let arryOrd=[];
+// arrayOrd[0]=num6;
+// arrayOrd[1]=num7;
+// arrayOrd[2]=num8;
+
+// arrayOrd.sort();
+// document.getElementById("primo").innerHTML=arrayOrd[2];
+// document.getElementById("secondo").innerHTML=arrayOrd[1];
+// document.getElementById("terzo").innerHTML=arrayOrd[0];
+
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
