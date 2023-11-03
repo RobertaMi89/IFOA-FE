@@ -4,8 +4,7 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 let calcolo;
 function area(l1, l2) {
-  calcolo = l1 * l2;
-  return calcolo;
+   return l1 * l2;
 }
 console.log(area(2, 7));
 
@@ -118,7 +117,7 @@ console.log(result);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function cutString(str) {
-  return str.trim().slice(1, -1);
+  return str.slice(1, -1);
 }
 const risultato1 = cutString("ciao a tutti");
 console.log(risultato1);
