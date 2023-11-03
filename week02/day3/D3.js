@@ -244,3 +244,27 @@ console.log("CHARACTERS WITHOUT FEMALE", characters.length);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
+//     mass: 77,
+//     hair_color: "auburn, white",
+//     skin_color: "fair",
+//     eye_color: "blue-gray",
+//     birth_year: "57BBY",
+//     gender: "male"
+
+/*prima soluzione*/
+let randomIndex = Math.floor(Math.random() * starWarsCharacters.length);
+let selectedCharacter= starWarsCharacters[randomIndex];
+console.log ("Questo personaggio si chiama "+selectedCharacter.name+" ha un'altezza di "+selectedCharacter.height+" cm, ha una massa di "+selectedCharacter.mass+". Ha i capelli "+selectedCharacter.hair_color+", il colore della pelle è "+selectedCharacter.skin_color+". Il colore dei suoi occhi è "+selectedCharacter.eye_color+" il suo anno di nascita è "+selectedCharacter.birth_year+" e il suo genere è "+selectedCharacter.gender);
+
+/*seconda soluzione*/
+
+let description= "The character name is "+selectedCharacter.name;
+if(selectedCharacter.height) description+=" she/he has an height of "+selectedCharacter.height;
+if(selectedCharacter.mass) description+=" she/he has a mass of "+selectedCharacter.mass;
+if(selectedCharacter.hair_color!="n/a") description+=", she/he has "+selectedCharacter.hair_color+" hair color";
+if(selectedCharacter.skin_color) description+=" and she/he has "+selectedCharacter.skin_color+" skin color.";
+if(selectedCharacter.eye_color)description+=" She/he has "+selectedCharacter.eye_color+" eye color."
+if(selectedCharacter.birth_year!="unknown")description+=" His/her birt year is "+selectedCharacter.birth_year;
+if(selectedCharacter.gender)description+=" he/she is a "+selectedCharacter.gender;
+
+console.log(description);
