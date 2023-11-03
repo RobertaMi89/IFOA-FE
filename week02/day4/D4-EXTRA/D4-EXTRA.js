@@ -8,6 +8,9 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
+// Esegui la funzione e stampa il risultato
+
 /* EXTRA 2
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).

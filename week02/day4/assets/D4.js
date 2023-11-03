@@ -105,21 +105,14 @@ console.log (risultato);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function upperFirst(str1){
-    const parola=str1.split("");
-    const capitalized=parola.map(parola=>{
-        if (parola.length >0){
-            return parola.charAt(0).toUpperCase()+parola.slice(1);
-        }else{
-            return parola;
-        }
-    })
-    const risultato = capitalized.join("");
-    return risultato;
-    
+function upperFirst(inputString) {
+    return inputString.replace(/\b\w/g, function(match) {
+        return match.toUpperCase();
+    });
 }
-const result=upperFirst("ciao a tutti");
-console.log (result);
+
+const result = upperFirst("ciao a tutti"); 
+console.log(result); 
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
