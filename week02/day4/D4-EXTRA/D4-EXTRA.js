@@ -118,11 +118,11 @@ function maxShoppingCart(shoppingCart){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function latestShoppingCart(){
+function latestShoppingCart(shoppingCart){
     let lastOne = shoppingCart.length-1;
     return shoppingCart[lastOne];
 }
-console.log(latestShoppingCart());
+console.log(latestShoppingCart(shoppingCart));
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
@@ -132,18 +132,32 @@ console.log(latestShoppingCart());
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function loopUntil(n){
-    let num=0;
-    while (num < 10) {
-        let valore = Math.floor(Math.random(n)*3);
-        console.log(valore);
-      } 
+  
 }
+loopUntil(Math.floor(Math.random()*10));
 console.log();
+
+
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let array=[4,"dede",8,9,"sese",14,67];
+function average(array){
+    let somma=0;
+    let num=0;
+    for(let i=0;i<array.length;i++){
+
+        if(typeof array[i] == "number"){
+            somma+=array[i];
+            num=num+1;
+        }
+    }
+    media=somma/num;
+    return media;
+}
+console.log(average(array));
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
