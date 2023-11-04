@@ -99,20 +99,17 @@ console.log(shoppingCart);
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-function maxShoppingCart(){
-    let prices=[];
-    for(let i=0;i<shoppingCart.length;i++){
-        prices.push(shoppingCart[i].price);
-    }
-    let max=prices[0];
-    for(let i=0;i<prices.length;i++){
-        if(prices[i]>max){
-            max=prices[i];
+function maxShoppingCart(shoppingCart){
+    let maxValue=shoppingCart[0];
+   
+    for(let i=1;i<shoppingCart.length;i++){
+        if(shoppingCart[i].price>maxValue.price){
+          maxValue =shoppingCart[i];
         }
     }
-    return max;
+    return maxValue;
 }
-    console.log(maxShoppingCart());
+    console.log(maxShoppingCart(shoppingCart));
 
 /* EXTRA 5
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
@@ -121,6 +118,12 @@ function maxShoppingCart(){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function latestShoppingCart(){
+    let lastOne = shoppingCart.length-1;
+    return shoppingCart[lastOne];
+}
+console.log(latestShoppingCart());
+
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
@@ -128,6 +131,14 @@ function maxShoppingCart(){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function loopUntil(n){
+    let num=0;
+    while (num < 10) {
+        let valore = Math.floor(Math.random(n)*3);
+        console.log(valore);
+      } 
+}
+console.log();
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
