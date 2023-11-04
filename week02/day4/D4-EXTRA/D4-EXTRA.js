@@ -131,11 +131,6 @@ console.log(latestShoppingCart(shoppingCart));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function loopUntil(n){
-  
-}
-loopUntil(Math.floor(Math.random()*10));
-console.log();
 
 
 /* EXTRA 7
@@ -164,6 +159,19 @@ console.log(average(array));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let stringArray =["Ciao sono io","Domani sarà domenica","sono a casa","la prossima settimana sarò a casa","buonanotte"];
+function longest(strArray){
+        let maxValue=strArray[0];
+       
+        for(let i=1;i<strArray.length;i++){
+            if(strArray[i].length>maxValue.length){
+              maxValue =strArray[i];
+            }
+        }
+        return maxValue;
+    }
+        console.log(longest(stringArray));
+
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
@@ -171,12 +179,30 @@ console.log(average(array));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let str="Buongiorno, questa è una mail di SPAM";
+    function antiSpam(emailContent){
+        if(!emailContent.includes("SPAM")&&!emailContent.includes("SCAM")){
+            console.log(emailContent);
+            return true;
+        }
+    }
+    console.log(antiSpam(str));  
+
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let esData= new Date('2021/12/25');
+function diffData(data){
+    let dataOggi=new Date();
+    let diff=dataOggi.getTime()-data.getTime();
+    return diff/86400000;
+}
+console.log(diffData(esData));
+
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
