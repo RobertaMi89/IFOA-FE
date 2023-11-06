@@ -1,75 +1,139 @@
-html,body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e9edee;
+html,
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e9edee;
 }
-/*HEADER*/
-#first{
-    background-color: #222f3f;
-    text-align: left;
+p {
+  color: #307d8c;
 }
-header img{
-    width: 20%;
-    margin-left: 12px;
-}
-#navbar{
-    background-color: #364759;
-    color:white;
-   
 
+/*HEADER*/
+#first {
+  background-color: #222f3f;
+  text-align: left;
 }
-#navbar ul{
-    display: inline-block;
-    margin-left: 15px;
-    padding: 0;
-   
+header img {
+  width: 10%;
+  margin-left: 12px;
+  margin-top: 5px;
 }
-#navbar ul li{
-    list-style-type:none;
-    float: left;
-    margin-right: 15px;
+#navbar {
+  background-color: #364759;
+  color: white;
 }
-#sizeMain{
-    margin-left: 15px;
-    margin-right: 15px;
+#navbar ul {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 0;
 }
+#navbar ul li {
+  list-style-type: none;
+  float: left;
+  margin-right: 15px;
+}
+/*MAIN*/
+#sizeMain {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 /*BOX ARANCIO*/
-#orange{
-    background-color: #f56600;
-    color: white;
-    text-align: center;
+#orange {
+  background-color: #f56600;
+  color: white;
+  text-align: center;
+}
+#title {
+  color: white;
+  padding: 5px;
 }
 
 /*BOX VERDE*/
-#greenImage{
-    background-image: url(../images/bg-image.png);
-    background-size:cover;
-    background-repeat: repeat-x;
-    color:white;
-    text-align: center;
-    padding:20px
+#greenImage {
+  background-image: url(../images/bg-image.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
+
 /*BOX BIANCO*/
-#boxBianco{
-    background-color: white;
-    
+#boxBianco {
+  background-color: white;
+  padding: 15px;
+  margin-top: 20px;
+  padding-top: 0;
 }
+
 /*BOX CARDS*/
-.class{
-    width: 100%;
-    display: inline-block;
+#boxBianco #testi {
+  width: 100%;
   text-align: left;
 }
-#boxBianco img{
-    width: 24%;
-    border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+#testi h3 {
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
 }
+#testi p {
+  display: inline-block;
+}
+#boxBianco img {
+  text-align: center;
+  width: 23%;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 5px px;
+}
+.card {
+  width: 100%;
+  display: inline;
+  text-align: left;
+  vertical-align: top;
+  margin: 10px;
+}
+
 /*ASIDE*/
-#aside{
-    margin-left: 15px;
-    margin-right: 15px;
+#aside {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top:20px;
 }
-#aside img{
-    width: 100%;
+#aside figure {
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+figure figcaption{
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+}
+figure p {
+    display: inline-block;
+    margin-top: 0;
+  }
+#aside figure img {
+  width: 100%;
+}
+
+/*FOOTER*/
+footer {
+  text-align: center;
+}
+#link {
+  background-color: #364759;
+  padding: 10px;
+}
+footer a {
+  color: white;
+}
+#boxBlu {
+  background-color: #222f3f;
+}
+#boxBlu img {
+  width: 15%;
+  padding: 50px;
+  text-align: center;
 }
