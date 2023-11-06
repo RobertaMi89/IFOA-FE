@@ -1,1 +1,75 @@
-/* Your styles here */
+html,body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9edee;
+}
+/*HEADER*/
+#first{
+    background-color: #222f3f;
+    text-align: left;
+}
+header img{
+    width: 20%;
+    margin-left: 12px;
+}
+#navbar{
+    background-color: #364759;
+    color:white;
+   
+
+}
+#navbar ul{
+    display: inline-block;
+    margin-left: 15px;
+    padding: 0;
+   
+}
+#navbar ul li{
+    list-style-type:none;
+    float: left;
+    margin-right: 15px;
+}
+#sizeMain{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/*BOX ARANCIO*/
+#orange{
+    background-color: #f56600;
+    color: white;
+    text-align: center;
+}
+
+/*BOX VERDE*/
+#greenImage{
+    background-image: url(../images/bg-image.png);
+    background-size:cover;
+    background-repeat: repeat-x;
+    color:white;
+    text-align: center;
+    padding:20px
+}
+/*BOX BIANCO*/
+#boxBianco{
+    background-color: white;
+    
+}
+/*BOX CARDS*/
+.class{
+    width: 100%;
+    display: inline-block;
+  text-align: left;
+}
+#boxBianco img{
+    width: 24%;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+/*ASIDE*/
+#aside{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#aside img{
+    width: 100%;
+}
