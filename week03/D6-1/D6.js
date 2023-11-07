@@ -11,7 +11,9 @@ function concatStr(str1, str2) {
 }
 
 concatStr("Ciao", "belli");
-  /*Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
+
+  /*ESERCIZIO 2
+  Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 function random(length) {
   const randomArray = [];
@@ -106,12 +108,24 @@ console.log(newArray);
   const stringArray = ["EPICODE", "is", "great"];
   const lengths = str(stringArray);
   console.log(lengths);
-  
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+function generatore() {
+  const numArray = [];
+  for (let i = 1; i <= 99; i += 2) {
+    numArray.push(i);
+  }
+  return numArray;
+}
 
-/* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
+const numbers = generatore();
+console.log(numbers);
+
+
+/*ESERCIZIO 9
+ Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
   {
     Title: 'The Lord of the Rings: The Fellowship of the Ring',
