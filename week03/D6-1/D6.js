@@ -114,7 +114,7 @@ console.log(newArray);
 */
 function generatore() {
   const numArray = [];
-  for (let i = 1; i <= 99; i += 2) {
+  for (let i = 1; i <= 100; i += 2) {
     numArray.push(i);
   }
   return numArray;
@@ -244,27 +244,107 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+function filmVecchio(films) {
+  if (films.length === 0) {
+    return null; 
+  }
+  let filmPiuVecchio = films[0]; 
+
+  films.forEach(function (film) {
+    const annoCorrente = parseInt(film.Year);
+    const annoPiuVecchio = parseInt(filmPiuVecchio.Year);
+
+    if (annoCorrente < annoPiuVecchio) {
+      filmPiuVecchio = film;
+    }
+  });
+  return filmPiuVecchio;
+}
+const filmPiuVecchio = filmVecchio(movies);
+console.log("Il film più vecchio è:", filmPiuVecchio);
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+function numeroDiFilm(films) {
+  return films.length;
+}
+
+const numeroDiFilmNellArray = numeroDiFilm(movies);
+console.log("Il numero di film nell'array è:", numeroDiFilmNellArray);
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+function ottieniTitoliDeiFilm(films) {
+  const titoliDeiFilm = films.map(function (film) {
+    return film.Title;
+  });
+  return titoliDeiFilm;
+}
+
+const titoliDeiFilmArray = ottieniTitoliDeiFilm(movies);
+console.log("Array con i titoli dei film:", titoliDeiFilmArray);
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+function filmDelMillennioCorrente(films) {
+  const millennioCorrente = new Date().getFullYear().toString().slice(0, 3); // Ottiene il millennio corrente
+  const filmDelMillennio = films.filter(function (film) {
+    return parseInt(film.Year) >= parseInt(millennioCorrente + '00');
+  });
+  return filmDelMillennio;
+}
 
+const filmMillennioCorrenteArray = filmDelMillennioCorrente(movies);
+console.log("Film usciti nel millennio corrente:", filmMillennioCorrenteArray);
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+function sommaAnniDiProduzione(films) {
+  const sommaAnni = films.reduce(function (acc, film) {
+    return acc + parseInt(film.Year);
+  }, 0);
+  return sommaAnni;
+}
+
+const sommaAnniProduzione = sommaAnniDiProduzione(movies);
+console.log("Somma degli anni di produzione dei film:", sommaAnniProduzione);
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+function trovaFilmPerIMDbID(films, imdbID) {
+  return films.find(function (film) {
+    return film.imdbID === imdbID;
+  });
+}
 
+const imdbIDDaCercare = 'tt0167260'; 
+const filmTrovato = trovaFilmPerIMDbID(movies, imdbIDDaCercare);
+
+if (filmTrovato) {
+  console.log("Film trovato:", filmTrovato);
+} else {
+  console.log("Nessun film trovato con l'IMDb ID:", imdbIDDaCercare);
+}
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+function trovaIndicePrimoFilmPerAnno(films, annoCercato) {
+  const indice = films.findIndex(function (film) {
+    return film.Year === annoCercato;
+  });
+
+  return indice;
+}
+
+const annoDaCercare = '2003'; 
+const indicePrimoFilm = trovaIndicePrimoFilmPerAnno(movies, annoDaCercare);
+
+if (indicePrimoFilm !== -1) {
+  console.log("Indice del primo film uscito nell'anno", annoDaCercare + ":", indicePrimoFilm);
+} else {
+  console.log("Nessun film trovato nell'anno", annoDaCercare);
+}
