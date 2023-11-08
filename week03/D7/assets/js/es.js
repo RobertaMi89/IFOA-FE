@@ -84,19 +84,38 @@ hideFirstUl();
         Scrivi una funzione che renda verde il background di ogni lista non ordinata
        */
 
-const paintItGreen = function () {};
+const paintItGreen = function () {
+  document.getElementById("secondList").style.backgroundColor = "green";
+};
+paintItGreen();
 
 /* ESERCIZIO 9
         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
        */
 
-const makeItClickable = function () {};
+const makeItClickable = function () {
+  const title = document.querySelector("h1");
+  title.addEventListener("click", function () {
+    const text = title.textContent;
+    title.textContent = text.slice(0, -1);
+  });
+};
+makeItClickable();
 
 /* ESERCIZIO 10
         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
        */
 
-const revealFooterLink = function () {};
+const revealFooterLink = function () {
+  const footer = document.querySelector("footer");
+  footer.addEventListener("click", function () {
+    const link = document.querySelector("footer a");
+    const URL = link.getAttribute("href");
+
+    alert(URL);
+  });
+};
+revealFooterLink();
 
 /* ESERCIZIO 11
         Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
