@@ -4,6 +4,7 @@
 
 const changeTitle = function () {
   const title = document.querySelector("h1");
+
   title.innerText = "Questo è il titolo alternativo della pagina";
 };
 changeTitle();
@@ -14,6 +15,7 @@ changeTitle();
 
 const addClassToTitle = function () {
   const title = document.querySelector("h1");
+
   title.classList.remove("myClass");
   title.classList.add("myHeading");
 };
@@ -42,23 +44,41 @@ const changeUrls = function () {
   }
 };
 changeUrls();
+
 /* ESERCIZIO 5
         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
      */
 
-const addToTheSecond = function () {};
+const addToTheSecond = function (newEl) {
+  const ul = document.getElementById("secondList");
+  const li = document.createElement("li");
+
+  ul.innerHTML += `<li>${newEl}</li>`;
+};
+addToTheSecond("4rt");
 
 /* ESERCIZIO 6
         Scrivi una funzione che aggiunga un paragrafo al primo div
      */
 
-const addParagraph = function () {};
+const addParagraph = function (newEl) {
+  const div = document.querySelectorAll("div")[0];
+  let par = document.createElement("p");
+
+  par.innerText = newEl;
+  div.innerHTML += `<p>${newEl}</p>`;
+};
+addParagraph("ciao");
 
 /* ESERCIZIO 7
         Scrivi una funzione che faccia scomparire la prima lista non ordinata
      */
 
-const hideFirstUl = function () {};
+const hideFirstUl = function () {
+  const ul = document.getElementById("firstList");
+  ul.remove();
+};
+hideFirstUl();
 
 /* ESERCIZIO 8 
         Scrivi una funzione che renda verde il background di ogni lista non ordinata
