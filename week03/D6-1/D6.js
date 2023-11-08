@@ -290,7 +290,7 @@ console.log("Array con i titoli dei film:", titoliDeiFilmArray);
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 function filmDelMillennioCorrente(films) {
-  const millennioCorrente = new Date().getFullYear().toString().slice(0, 3); // Ottiene il millennio corrente
+  const millennioCorrente = new Date().getFullYear().toString().slice(0, 3);
   const filmDelMillennio = films.filter(function (film) {
     return parseInt(film.Year) >= parseInt(millennioCorrente + '00');
   });
@@ -299,6 +299,7 @@ function filmDelMillennioCorrente(films) {
 
 const filmMillennioCorrenteArray = filmDelMillennioCorrente(movies);
 console.log("Film usciti nel millennio corrente:", filmMillennioCorrenteArray);
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
@@ -329,6 +330,33 @@ if (filmTrovato) {
 } else {
   console.log("Nessun film trovato con l'IMDb ID:", imdbIDDaCercare);
 }
+
+/* ESERCIZIO 14b: ricerca su selezione*/
+
+// Popolamento della combo con i titoli dei film e gli imdbID come value
+
+// Al caricamento della finestra assegno al div che conterrà il dettaglio film la classe hidden, definita in css, per non farlo apparire
+window.addEventListener('load', function() {
+	document.getElementById('film').className = 'hidden';
+});
+
+movies.forEach((film) => {
+	document.getElementById('imdbID').innerHTML += `<option value="${film.imdbID}">${film.Title} - Anno ${film.Year}</option>`;
+});
+
+function cerca() {
+	let imdbID = document.getElementById('imdbID').value; // recupero dell'imdbID scelto
+	mioFilm = movies.find((element) => element.imdbID === imdbID); // ricerca enll'array del film con l'imdbID scelto
+
+	// Quando si carica il film sostituisco la class hidden con la classe visibile (sistema alternativo rispetto a riga 339)
+	document.getElementById('film').className = 'visible';
+	// document.getElementById('film').style.display = 'block'; // comparsa del div che contiene i dettagli dei film (nel CSS è display: none;)
+	// scrittura nell'html
+	document.getElementById('titolo').innerHTML = mioFilm.Title;
+	document.getElementById('anno').innerHTML = mioFilm.Year;
+	document.getElementById('poster').setAttribute('src', mioFilm.Poster); // settaggio dell'attributo src del tag img con l'immagine trovata nella base dati
+}
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
