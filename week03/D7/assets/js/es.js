@@ -3,9 +3,8 @@
     */
 
 const changeTitle = function () {
-  const title = document.querySelector("h1");
-
-  title.innerText = "Questo è il titolo alternativo della pagina";
+  document.querySelector("h1").innerText =
+    "Questo è il titolo alternativo della pagina";
 };
 changeTitle();
 
@@ -177,42 +176,64 @@ generateTable();
         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
      */
 
+const addRow = function (imgUrl, productName, quantity, price) {
+  const table = document.querySelector("table");
 
-  const addRow = function (imgUrl, productName, quantity, price) {
-    const table = document.querySelector("table")
+  const newRow = document.createElement("tr");
 
-    const newRow = document.createElement("tr")
+  const tdImage = document.createElement("td");
+  tdImage.innerHTML = `<img src=${imgUrl} alt="smartphone" height="200" />`;
+  const tdProduct = document.createElement("td");
+  tdProduct.innerText = productName;
+  const tdQuantity = document.createElement("td");
+  tdQuantity.innerText = quantity;
+  const tdPrice = document.createElement("td");
+  tdPrice.innerText = price + "€";
 
-    const tdImage = document.createElement("td")
-    tdImage.innerHTML = `<img src=${imgUrl} alt="smartphone" height="200" />`
-    const tdProduct = document.createElement("td")
-    tdProduct.innerText = productName
-    const tdQuantity = document.createElement("td")
-    tdQuantity.innerText = quantity
-    const tdPrice = document.createElement("td")
-    tdPrice.innerText = price + "€"
-
-    newRow.appendChild(tdImage)
-    newRow.appendChild(tdProduct)
-    newRow.appendChild(tdQuantity)
-    newRow.appendChild(tdPrice)
-    table.appendChild(newRow)
+  newRow.appendChild(tdImage);
+  newRow.appendChild(tdProduct);
+  newRow.appendChild(tdQuantity);
+  newRow.appendChild(tdPrice);
+  table.appendChild(newRow);
 };
 
 /* ESERCIZIO 14
        Crea una funzione che nasconda le immagini della tabella quando eseguita (usa button per far sparire le immagini)
      */
 
-const hideAllImages = function () {};
+// const hideAllImages = function () {
+//   const images = document.querySelectorAll("img")
+//   images.forEach(image => image.style.display = "none")
+
+// };
+// hideAllImages()
 
 /* EXTRA ESERCIZIO 15
        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
      */
 
-const changeColorWithRandom = function () {};
+const changeColorWithRandom = function () {
+  let elementToChange = document.getElementById("changeMyColor");
+  elementToChange.onclick = function () {
+    const red = Math.round(Math.random() * 255);
+    const green = Math.round(Math.random() * 255);
+    const blue = Math.round(Math.random() * 255);
+
+    const randomColor = `rgb(${red},${green},${blue})`;
+    elementToChange.style.userSelect = "none";
+    elementToChange.style.cursor = "pointer";
+    elementToChange.style.color = randomColor;
+  };
+};
+
+changeColorWithRandom();
 
 /* EXTRA ESERCIZIO 16
        Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
      */
 
-const deleteVowels = function () {};
+const deleteVowels = function () {
+  // document.querySelectorAll("h1,h2,h3,p,a,li,th,td").forEach((node) => node.innerText = [...node.innerText].filter(char => { char = char.toLowerCase(); return char !== "e" && char !== "a" && char !== "i" && char !== "o" && char !== "u" }).join(""))
+  //   }
+  // deleteVowels()
+};
