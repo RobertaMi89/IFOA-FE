@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#styleTable{
+    border: 1px solid black;
+
+}.addBtn {
+   
+    background: #d9d9d9;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  ul li {
+    background: #eee;
+    font-size: 18px;
+  }
+  ul li.checked {
+    background: #888;
+    color: #fff;
+  
+  }
+  .barrato {
+    text-decoration: line-through;
+}
