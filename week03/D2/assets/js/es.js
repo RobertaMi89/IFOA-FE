@@ -215,9 +215,9 @@ const addRow = function (imgUrl, productName, quantity, price) {
 const changeColorWithRandom = function () {
   let elementToChange = document.getElementById("changeMyColor");
   elementToChange.onclick = function () {
-    const red = Math.round(Math.random() * 255);
-    const green = Math.round(Math.random() * 255);
-    const blue = Math.round(Math.random() * 255);
+    let red = Math.round(Math.random() * 256);
+    let green = Math.round(Math.random() * 256);
+    let blue = Math.round(Math.random() * 256);
 
     const randomColor = `rgb(${red},${green},${blue})`;
     elementToChange.style.userSelect = "none";
