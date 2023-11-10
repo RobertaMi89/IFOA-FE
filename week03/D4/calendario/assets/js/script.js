@@ -88,6 +88,8 @@ const giornoAppuntamento = function (indiceGiorno) {
 };
 //a questo punto va creata la griglia dei div cntenenti i giorni del mese in corso, questa griglia userà il numero di giorni per gestire l'array globale creato all'inizio e scriverà i vari div
 
+//creare griglia e array
+
 const creaGriglia = function (numeroGiorni) {
   //numeroGiorni è il numero di giorni del mese corrente
   const calendarDiv = document.getElementById("calendar");
@@ -95,8 +97,8 @@ const creaGriglia = function (numeroGiorni) {
     const cellaGiorno = document.createElement("div"); //ad oni giorno associo un div
     cellaGiorno.classList.add("day"); //stilizzo il div come definito in css
 
+    //rendo cliccabili i div dei giorni
     cellaGiorno.addEventListener("click", function (e) {
-      //rendo cliccabili i div dei giorni
       deselezionaCelle(); //deseleziono l'eventuale altra cella selezionata
       cellaGiorno.classList.add("selected"); //aggiungo la classe css per mostrare la selezione del giorno cliccato
       giornoAppuntamento(i); //scrivo il giorno cliccato nella sezione Giorno del form
