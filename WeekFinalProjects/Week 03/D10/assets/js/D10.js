@@ -29,6 +29,7 @@ let me = {
   surname: "Miosi",
   age: 34,
 };
+
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
@@ -77,6 +78,7 @@ function whoIsBigger(x, y) {
   }
 }
 console.log(whoIsBigger(2, 8));
+
 /* ESERCIZIO 3
 
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -228,7 +230,7 @@ function deleteProp(obj, str1) {
 let risul = deleteProp(myObject, 'age');
 console.log(risul);
 
-
+//------------------------------------------------------------------------------------------
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -475,8 +477,6 @@ console.log(selectAllTd());
 function selectAllTD() {
   return document.querySelectorAll("td");
 }
-
-// Funzione per stampare il testo contenuto in ogni elemento <td>
 function stampaTd() {
   let tdElements = selectAllTD();
   for (let dElement of tdElements) {
@@ -509,7 +509,7 @@ function addItem() {
 }
 console.log(myList.innerHTML); //per far vedere in console la lista creata in precedenza
 addItem();
-  //
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
