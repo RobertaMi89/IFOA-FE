@@ -543,7 +543,12 @@ addClass();
   ***
 
 */
-
+function metaAlbero(rami) {
+  for (let i = 1; i <= rami; i++) {
+    console.log('*'.repeat(i));
+  }
+}
+metaAlbero(3)
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
