@@ -215,16 +215,16 @@ console.log(result);
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro. (eliminare una proprietà di un oggetto)
 */
-function deleteProp(str, str1) {
-  delete str[str1];
-  return str;
-}
-
 let myObject = {
   name: 'Roberta',
   age: 34,
   city: 'Palermo'
 };
+console.log(myObject)
+function deleteProp(obj, str1) {
+  delete obj[`${str1}`];
+  return obj;
+}
 let risul = deleteProp(myObject, 'age');
 console.log(risul);
 
@@ -455,30 +455,80 @@ console.log("Array di film senza l'elemento nella posizione 2:", modifiedMovies)
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+function container() {
+  return document.getElementById("container");
+}
+console.log(container());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+function selectAllTd() {
+ let tdEl = document.querySelectorAll("td");
+  return Array.from(tdEl);
+}
+console.log(selectAllTd());
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+function selectAllTD() {
+  return document.querySelectorAll("td");
+}
+
+// Funzione per stampare il testo contenuto in ogni elemento <td>
+function stampaTd() {
+  let tdElements = selectAllTD();
+  for (let dElement of tdElements) {
+    console.log(dElement.textContent);
+  }
+}
+stampaTd();
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+function coloreSfondoA() {
+  let linkA = document.querySelectorAll("a");
+  for (let linkElement of linkA) {
+    linkElement.style.backgroundColor = "red";
+  }
+}
+coloreSfondoA();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function addItem() {
+  let newListItem = document.createElement("li");
+  let newText = document.createTextNode("?");
+  newListItem.appendChild(newText);
 
+  let myList = document.getElementById("myList");
+  myList.appendChild(newListItem);
+}
+console.log(myList.innerHTML); //per far vedere in console la lista creata in precedenza
+addItem();
+  //
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+function svuotaLista() {
+  let myList = document.getElementById("myList");
+  myList.innerHTML = "";
+}
+svuotaLista();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+function addClass() {
+  let trElements = document.querySelectorAll("tr");
+  for (let trElement of trElements) {
+    trElement.classList.add("test");
+  }
+}
+addClass();
 
 // [EXTRA] JS Avanzato
 
