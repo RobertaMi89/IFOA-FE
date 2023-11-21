@@ -18,12 +18,13 @@
 }
 @media screen and (min-width: 1201px) {
   header {
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
   header div {
     text-align: left;
   }
-  header div img {
+  /* header div img {
     display: inline-block;
     text-align: left;
     margin-bottom: 0;
@@ -31,10 +32,7 @@
   header p {
     display: inline-block;
     vertical-align: top;
-  }
-  header nav {
-    text-align: right;
-  }
+  } */
   table {
     margin: auto;
     width: 60%;
