@@ -1,61 +1,3 @@
-/*MEDIA QUERY*/
-@media screen and (max-width: 576px) {
-  aside h2 {
-    font-size: 3rem;
-  }
-  section h2 {
-    text-transform: none;
-  }
-  footer {
-    padding: 2em;
-    font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 577px) and (max-width: 1200px) {
-  table {
-    margin: auto;
-  }
-}
-@media screen and (min-width: 1201px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-  header div {
-    text-align: left;
-  }
-  /* header div img {
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 0;
-  }
-  header p {
-    display: inline-block;
-    vertical-align: top;
-  } */
-  table {
-    margin: auto;
-    width: 60%;
-    padding: 25%;
-  }
-
-  article h2 {
-    font-weight: bold;
-  }
-  article iframe {
-    width: 48%;
-    display: inline-block;
-  }
-  section {
-    display: inline-block;
-    vertical-align: top;
-    border-radius: 20px;
-  }
-  aside div {
-    width: 33%;
-    display: inline-block;
-  }
-}
 /* IMPOSTAZIONI GENERALI */
 html {
   font-size: 62.5%;
@@ -257,4 +199,127 @@ footer {
 }
 footer a {
   color: fuchsia;
+}
+/*MEDIA QUERY*/
+@media screen and (min-width: 576px) {
+  table {
+    margin: auto;
+  }
+  aside h2 {
+    font-size: 3rem;
+  }
+  section h2 {
+    text-transform: none;
+  }
+  footer {
+    padding: 2em;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header div {
+    text-align: left;
+  }
+  header div img {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  header p {
+    display: inline-block;
+    vertical-align: top;
+  }
+  table {
+    margin: auto;
+    width: 70%;
+    padding: 25%;
+    margin-bottom: 5%;
+  }
+  article h1 {
+    font-size: 4em;
+  }
+  article h2 {
+    font-weight: bold;
+  }
+  article iframe {
+    width: 49%;
+    display: inline-block;
+    height: 200px;
+  }
+  section {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 20px;
+    height: 200px;
+  }
+  aside div {
+    width: 33%;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    line-height: 2;
+  }
+
+  header {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  header,
+  main,
+  footer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section {
+    border-radius: 20px;
+  }
+
+  header {
+    text-align: left;
+  }
+
+  header .brand,
+  header nav,
+  header .brand p {
+    display: inline-block;
+  }
+
+  header .brand {
+    width: 75%;
+  }
+
+  header .brand img {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+
+  iframe,
+  section {
+    display: inline-block;
+    width: 50%;
+    margin-inline: -2px;
+    vertical-align: middle;
+    height: 200px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  aside div {
+    display: inline-block;
+    width: 33.333%;
+    margin-inline: -2px;
+  }
 }
