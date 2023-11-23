@@ -1,0 +1,62 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #612406;
+}
+
+.flex {
+  display: flex;
+}
+.card {
+  margin-top: 10%;
+  border-radius: 140px;
+  justify-content: center;
+  width: 54vh;
+  min-width: 40vh;
+  min-height: 70vh;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fbf7e3;
+}
+
+.card img {
+  object-fit: cover;
+  width: 500px;
+  height: 480px;
+}
+.elements {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.prezzo {
+  font-size: 1.7em;
+  margin-left: 20px;
+}
+.testo {
+  margin: 20px;
+  text-align: left;
+}
+#testo {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+.titolo {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 2em;
+}
+.btn {
+  background-color: #f3df85;
+  justify-content: center;
+  width: 211px;
+  height: 50px;
+  border-radius: 26px;
+  margin-left: 28%;
+  margin-bottom: 20px;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
