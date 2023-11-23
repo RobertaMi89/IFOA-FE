@@ -1,4 +1,5 @@
 /*DESKTOP VERSION*/
+
 html {
   font-family: Arial, Helvetica, sans-serif;
   color: #612406;
@@ -13,21 +14,24 @@ html {
 .img img {
   margin: 20px;
 }
-.text h4 {
+.text h3 {
   margin-top: 40px;
 }
 .text p {
   margin-right: 20px;
 }
 /*MOBILE VERSION*/
-@media screen and(max-width:912px), (min-width: 576px) {
+@media screen and(min-width:1200px), (max-width: 900px) {
   .card {
     flex-direction: column-reverse;
+    width: 90%;
   }
   .img img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
+    justify-content: center;
   }
-  .text p {
+  .text {
+    margin: 20px;
   }
 }
