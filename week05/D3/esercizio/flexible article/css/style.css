@@ -1,0 +1,33 @@
+/*DESKTOP VERSION*/
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #612406;
+}
+.flex {
+  display: flex;
+}
+.card {
+  background-color: #fbf7e3;
+  border-radius: 30px;
+}
+.img img {
+  margin: 20px;
+}
+.text h4 {
+  margin-top: 40px;
+}
+.text p {
+  margin-right: 20px;
+}
+/*MOBILE VERSION*/
+@media screen and(max-width:912px), (min-width: 576px) {
+  .card {
+    flex-direction: column-reverse;
+  }
+  .img img {
+    max-width: 100%;
+    height: auto;
+  }
+  .text p {
+  }
+}
