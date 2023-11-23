@@ -3,6 +3,10 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: #612406;
 }
+body {
+  margin: 0;
+  width: 100%;
+}
 .flex {
   display: flex;
 }
@@ -10,10 +14,10 @@ html {
   justify-content: space-evenly;
   background-color: #fbf7e3;
   color: #612406;
-  border-radius: 90px;
-  width: 95vw;
-  height: 20vh;
   align-items: center;
+  flex-direction: column;
+  width: 18%;
+  height: auto;
 }
 .bottoni {
   background-color: #f3df85;
@@ -22,27 +26,30 @@ html {
   text-align: center;
   border-radius: 30px;
   font-size: 1.3em;
+  margin: 12px;
 }
 .titolo {
   background-color: #f3df85;
-  height: 14vh;
-  width: 29vw;
+  height: 7vh;
+  width: 11vw;
   margin: 12px;
   text-align: center;
   border-radius: 70px;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .titolo img {
-  margin: 10px;
+  margin: 5px;
+  width: 4vw;
+  height: 5vh;
 }
 .titolo h1 {
-  margin-top: 36px;
-  font-size: 3em;
+  margin-top: 18px;
+  font-size: 1.5em;
 }
+
 /*PRODUCT CARD*/
 
 .card {
-  margin-top: 10%;
   border-radius: 140px;
   justify-content: center;
   width: 54vh;
@@ -52,7 +59,6 @@ html {
   overflow: hidden;
   background-color: #fbf7e3;
 }
-
 .card img {
   object-fit: cover;
   width: 500px;
@@ -63,23 +69,23 @@ html {
   justify-content: center;
   align-items: center;
 }
-.prezzo {
-  font-size: 1.7em;
-  margin-left: 20px;
-}
 .testo {
   margin: 20px;
   text-align: left;
+}
+.titoloCard {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 2em;
 }
 #testo {
   margin: 0;
   margin-left: 20px;
   font-size: 1.2em;
 }
-.titolo {
-  margin: 0px;
-  font-weight: bold;
-  font-size: 2em;
+.prezzo {
+  font-size: 1.7em;
+  margin-left: 20px;
 }
 .btn {
   background-color: #f3df85;
@@ -95,59 +101,33 @@ a {
   text-decoration: none;
   font-size: 1.5em;
 }
-/*FLEXIBLE CARD*/
+/*FLEXIBLE ARTICLE*/
 
-.card {
-  margin-top: 10%;
-  border-radius: 140px;
-  justify-content: center;
-  width: 54vh;
-  min-width: 40vh;
-  min-height: 70vh;
-  flex-direction: column;
-  overflow: hidden;
+.cardA {
   background-color: #fbf7e3;
+  border-radius: 30px;
 }
-
-.card img {
-  object-fit: cover;
-  width: 500px;
-  height: 480px;
-}
-.elements {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.prezzo {
-  font-size: 1.7em;
-  margin-left: 20px;
-}
-.testo {
+.img img {
   margin: 20px;
-  text-align: left;
 }
-#testo {
-  margin: 0;
-  margin-left: 20px;
-  font-size: 1.2em;
+.testoA h3 {
+  margin-top: 40px;
 }
-.titolo {
-  margin: 0px;
-  font-weight: bold;
-  font-size: 2em;
+.testoA p {
+  margin-right: 20px;
 }
-.btn {
-  background-color: #f3df85;
-  justify-content: center;
-  width: 211px;
-  height: 50px;
-  border-radius: 26px;
-  margin-left: 28%;
-  margin-bottom: 20px;
-  align-items: center;
-}
-a {
-  text-decoration: none;
-  font-size: 1.5em;
+/*MOBILE VERSION*/
+@media screen and(min-width:1200px), (max-width: 900px) {
+  .cardA {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .img img {
+    max-width: 90%;
+    height: auto;
+    justify-content: center;
+  }
+  .testoA {
+    margin: 20px;
+  }
 }
