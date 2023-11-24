@@ -18,34 +18,37 @@ body {
   color: #612406;
   align-items: center;
   flex-direction: column;
-  width: 14%;
+  width: 10%;
 }
 
 .bottoni {
   background-color: #f3df85;
-  height: 7vh;
-  width: 11vw;
+  height: 10vh;
+  width: 8vw;
   text-align: center;
-  border-radius: 30px;
-  font-size: 1.3em;
-  margin: 12px;
+  border-radius: 42px;
+  font-weight: bold;
+  margin: 10px;
+}
+.center {
+  margin-top: 32px;
 }
 .titolo {
   background-color: #f3df85;
-  height: 7vh;
-  width: 11vw;
-  margin: 12px;
-  text-align: center;
+  height: 10vh;
+  width: 8vw;
+  margin-top: 20px;
+  margin-bottom: 10px;
   border-radius: 70px;
-  justify-content: space-evenly;
 }
 .titolo img {
-  margin: 5px;
+  margin: 18px 12px;
   width: 4vw;
   height: 5vh;
 }
+
 .titolo h3 {
-  margin-top: 18px;
+  margin-top: 28px;
   font-size: 1.5em;
 }
 
@@ -56,27 +59,25 @@ main {
   margin-left: 3%;
 }
 h1 {
-  display: inline-block;
+  font-weight: 900;
 }
 .container {
-  height: 75vh;
+  height: 36vh;
   flex-wrap: wrap;
   width: max-content;
 }
 .card {
-  border-radius: 140px;
-  /* justify-content: center; */
-  width: 30vw;
-  /* min-width: 40vh; */
-
+  border-radius: 60px;
+  width: 15vw;
   flex-direction: column;
   overflow: hidden;
   background-color: #fbf7e3;
+  margin-right: 26px;
 }
 .card img {
   object-fit: cover;
-  width: 500px;
-  height: 480px;
+  width: 310px;
+  height: 180px;
 }
 .elements {
   text-align: center;
@@ -84,54 +85,57 @@ h1 {
   align-items: center;
 }
 .testo {
-  margin: 20px;
+  margin: 14px 10px;
   text-align: left;
 }
 .titoloCard {
   margin: 0px;
-  font-weight: bold;
-  font-size: 2em;
+  font-weight: 900;
 }
 #testo {
   margin: 0;
-  margin-left: 20px;
-  font-size: 1.2em;
+  margin-left: 14px;
 }
 .prezzo {
-  font-size: 1.7em;
-  margin-left: 20px;
+  margin-left: 34px;
 }
 .btn {
   background-color: #f3df85;
   justify-content: center;
-  width: 211px;
-  height: 50px;
+  width: 160px;
+  height: 36px;
   border-radius: 26px;
-  margin-left: 28%;
-  margin-bottom: 20px;
+  margin-left: 23%;
   align-items: center;
 }
 a {
   text-decoration: none;
-  font-size: 1.5em;
+  font-weight: 700;
 }
 /*FLEXIBLE ARTICLE*/
-
+section h2 {
+  margin-top: 24px;
+  font-weight: 900;
+}
 .cardA {
   background-color: #fbf7e3;
   border-radius: 30px;
+  width: 80vw;
+  margin-bottom: 30px;
 }
 .img img {
   margin: 20px;
 }
 .testoA h3 {
-  margin-top: 40px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: 900;
 }
 .testoA p {
   margin-right: 20px;
 }
 /*MOBILE VERSION*/
-@media screen and(min-width:1200px), (max-width: 900px) {
+@media screen and(max-width:1200px) {
   .cardA {
     flex-direction: column-reverse;
     width: 90%;
