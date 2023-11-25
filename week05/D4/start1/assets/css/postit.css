@@ -1,0 +1,70 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 1200px;
+}
+.postIt {
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  font-family: cursive;
+  padding: 5px;
+  text-align: center;
+  box-shadow: inset 0px -27px 17px -3px rgba(0, 0, 0, 0.26);
+}
+.bold {
+  font-size: 2em;
+  padding-top: 70px;
+}
+.text {
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+#task1 {
+  background-color: cadetblue;
+  transform: rotate(5deg);
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+#task1:hover {
+  width: 300px;
+}
+#task2 {
+  background-color: aquamarine;
+  transform: rotate(-3deg);
+}
+#task2:hover {
+  @keyframes animation {
+    from {
+      transform: rotate(-6deg);
+    }
+    to {
+      transform: rotate(-3deg);
+    }
+  }
+}
+#task3 {
+  background-color: coral;
+  transform: rotate(3deg);
+}
+#task4 {
+  background-color: crimson;
+  transform: rotate(-6deg);
+}
+#task5 {
+  background-color: darkkhaki;
+  transform: rotate(-10deg);
+}
+#task6 {
+  background-color: cornflowerblue;
+  transform: rotate(8deg);
+}
+#task7 {
+  background-color: burlywood;
+  transform: rotate(-9deg);
+}
+#task8 {
+  background-color: darksalmon;
+  transform: rotate(3deg);
+}
