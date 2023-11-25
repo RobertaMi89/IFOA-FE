@@ -12,7 +12,16 @@
   padding: 5px;
   text-align: center;
   box-shadow: inset 0px -27px 17px -3px rgba(0, 0, 0, 0.26);
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-out;
+  animation: slap-in 1s;
 }
+.postIt:hover {
+  transform: scale(2 2);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
 .bold {
   font-size: 2em;
   padding-top: 70px;
@@ -24,47 +33,67 @@
 #task1 {
   background-color: cadetblue;
   transform: rotate(5deg);
-  transition-property: width;
-  transition-duration: 0.5s;
-}
-#task1:hover {
-  width: 300px;
+  animation-delay: 0.5s;
 }
 #task2 {
   background-color: aquamarine;
   transform: rotate(-3deg);
+  animation-delay: 0.4s;
 }
-#task2:hover {
-  @keyframes animation {
-    from {
-      transform: rotate(-6deg);
-    }
-    to {
-      transform: rotate(-3deg);
-    }
-  }
-}
+
 #task3 {
   background-color: coral;
   transform: rotate(3deg);
+  animation-delay: 0.3s;
 }
+
 #task4 {
   background-color: crimson;
   transform: rotate(-6deg);
+  animation-delay: 0.9s;
 }
+
 #task5 {
   background-color: darkkhaki;
   transform: rotate(-10deg);
+  animation-delay: 0.8s;
 }
 #task6 {
   background-color: cornflowerblue;
   transform: rotate(8deg);
+  animation-delay: 0.7s;
 }
 #task7 {
   background-color: burlywood;
   transform: rotate(-9deg);
+  animation-delay: 0.6s;
 }
 #task8 {
   background-color: darksalmon;
   transform: rotate(3deg);
+  animation-delay: 1s;
+}
+@keyframes slap-in {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(10);
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
