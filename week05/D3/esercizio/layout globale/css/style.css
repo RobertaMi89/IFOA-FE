@@ -10,8 +10,6 @@ body {
 .flex {
   display: flex;
 }
-.wrap {
-}
 .navbar {
   justify-content: flex-start;
   background-color: #fbf7e3;
@@ -73,7 +71,7 @@ h1 {
   flex-direction: column;
   overflow: hidden;
   background-color: #fbf7e3;
-  margin-right: 38px;
+  margin-right: 20px;
 }
 .card img {
   object-fit: cover;
@@ -142,6 +140,19 @@ section h2 {
 
 /*MEDIUM LARGE 1025px-1200px*/
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .titolo img {
+    margin: 22px 3px;
+    width: 4vw;
+    height: 4vh;
+  }
+  .titolo h3 {
+    font-size: 1.2em;
+    margin-top: 31px;
+    margin-left: 7px;
+  }
+  .bottoni p {
+    font-size: 0.9em;
+  }
   .wrap .container .card:first-of-type {
     display: none;
   }
@@ -170,16 +181,73 @@ section h2 {
     margin-top: 9%;
     font-size: 2em;
   }
+  .cardA {
+    flex-direction: column-reverse;
+    width: 94%;
+  }
+  .testoA {
+    margin-left: 20px;
+  }
 }
 
 /*MEDIUM laptop 769px-1024px*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    width: 18vw;
+  }
+  .titolo {
+    width: 14vw;
+  }
+  .titolo img {
+    margin: 22px 3px;
+    width: 4vw;
+    height: 4vh;
+  }
+  .titolo h3 {
+    font-size: 1.2em;
+    margin-top: 31px;
+    margin-left: 7px;
+  }
+  .bottoni {
+    width: 14vw;
+  }
+  .bottoni p {
+    font-size: 0.9em;
+  }
+  main {
+    max-width: 80vw;
+  }
   .wrap .container .card:nth-child(-n + 2) {
     display: none;
   }
+  .container {
+    height: 42vh;
+  }
+  .card {
+    width: 25vw;
+    margin-right: 13px;
+  }
+  .card img {
+    width: 25vw;
+  }
+  .titoloCard {
+    margin: 8px;
+    text-align: center;
+  }
+  .prezzo {
+    margin-right: 11px;
+  }
+  .btn {
+    width: 15vw;
+    margin: 9% 20%;
+  }
+  section h2 {
+    margin-top: 9%;
+    font-size: 2em;
+  }
   .cardA {
     flex-direction: column-reverse;
-    width: 90%;
+    width: 97%;
   }
   .img img {
     max-width: 90%;
@@ -193,6 +261,16 @@ section h2 {
 
 /*TABLET 481px-768px*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 140px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  main {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
   .wrap .container .card:first-of-type {
     display: none;
   }
