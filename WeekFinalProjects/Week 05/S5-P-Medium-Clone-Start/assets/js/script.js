@@ -1,31 +1,18 @@
-document.addEventListener("scroll", (e) => {
-  let startReadingBtn = document.getElementById("startReadingBtn");
-  let header = document.querySelector("header");
-  if (!isElementVisible(startReadingBtn)) {
-    headerColorToggle(header);
-  }
-});
+let scrollpos = window.scrollY;
+const header = document.querySelector("header");
+const header_height = header.offsetHeight;
 
-function headerColorToggle(el) {
-  if (el.classList.contains("whiteNav")) {
-    el.classList.remove("whiteNav");
+const add_class_on_scroll = () => header.classList.add("whiteNav");
+const remove_class_on_scroll = () => header.classList.remove("whiteNav");
+
+window.addEventListener("scroll", function () {
+  scrollpos = window.scrollY;
+
+  if (scrollpos >= header_height) {
+    add_class_on_scroll();
   } else {
-    el.classList.add("whiteNav");
+    remove_class_on_scroll();
   }
-}
 
-function isElementVisible(el) {
-  const rect = el.getBoundingClientRect();
-  const vWidth = window.innerWidth || doc.documentElement.clientWidth;
-  const vHeight = window.innerHeight || doc.documentElement.clientHeight;
-
-  if (
-    rect.right < 0 ||
-    rect.bottom < 0 ||
-    rect.left > vWidth ||
-    rect.top > vHeight
-  )
-    return false;
-
-  return true;
-}
+  console.log(scrollpos);
+});
