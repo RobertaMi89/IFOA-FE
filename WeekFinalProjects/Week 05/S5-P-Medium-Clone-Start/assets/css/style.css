@@ -36,6 +36,33 @@ header {
   text-align: center;
   padding: 8px 16px;
 }
+.greenButton {
+  animation: greenButton 300ms linear, color 300ms linear;
+}
+
+.whiteNav {
+  background-color: white;
+  transition: background-color 1000ms linear;
+}
+
+@keyframes greenButton {
+  0% {
+    background-color: #191919;
+  }
+  100% {
+    background: rgb(26, 137, 23);
+    border-color: rgb(26, 137, 23);
+  }
+}
+
+@keyframes whiteNav {
+  0% {
+    background-color: #ffc017;
+  }
+  100% {
+    background-color: white;
+  }
+}
 /*MAIN*/
 main {
   background-color: #ffc017;
@@ -80,14 +107,41 @@ article {
   margin-left: 64px;
   margin-top: 2%;
   font-family: "spectral";
+  font-family: "roboto";
 }
-.articoli {
-}
+
 .listaArt {
   flex-wrap: wrap;
+  list-style: none;
+}
+.listaArt span {
+  color: #f4f2f2;
+  font-weight: 800;
+  font-size: 2em;
+  margin-right: 10px;
 }
 .listaArt li {
   width: 30%;
+  margin-bottom: 50px;
+}
+.listaArt li img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.bold {
+  font-weight: bold;
+}
+.center {
+  align-items: center;
+}
+.centerStar {
+  color: #747576;
+  display: flex;
+  align-items: flex-end;
+}
+.spaceText {
+  display: flex;
+  justify-content: space-between;
 }
 section {
   margin-left: 64px;
