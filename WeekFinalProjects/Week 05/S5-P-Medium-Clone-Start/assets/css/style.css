@@ -37,7 +37,14 @@ header {
   padding: 8px 16px;
 }
 .greenButton {
-  animation: greenButton 300ms linear, color 300ms linear;
+  background: rgb(26, 137, 23);
+  border-color: rgb(26, 137, 23);
+  transition: background-color 1000ms linear;
+}
+
+.revertGreenButton {
+  background-color: #191919;
+  transition: background-color 1000ms linear;
 }
 
 .whiteNav {
@@ -45,24 +52,11 @@ header {
   transition: background-color 1000ms linear;
 }
 
-@keyframes greenButton {
-  0% {
-    background-color: #191919;
-  }
-  100% {
-    background: rgb(26, 137, 23);
-    border-color: rgb(26, 137, 23);
-  }
+.revertWhiteNav {
+  background-color: #ffc017;
+  transition: background-color 1000ms linear;
 }
 
-@keyframes whiteNav {
-  0% {
-    background-color: #ffc017;
-  }
-  100% {
-    background-color: white;
-  }
-}
 /*MAIN*/
 main {
   background-color: #ffc017;
