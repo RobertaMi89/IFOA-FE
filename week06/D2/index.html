@@ -12,8 +12,9 @@
     />
   </head>
   <body>
+    <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+      <div class="container-fluid ms-5">
         <a class="navbar-brand" href="#">
           <img
             src="https://seeklogo.com/images/E/Evelin_R_travel_agency-logo-F9A7A2958C-seeklogo.com.png"
@@ -63,25 +64,38 @@
         </div>
       </div>
     </nav>
-    <div class="container text-secondary bg-body-tertiary mt-5 rounded p-3">
-      <div class="d-flex">
-        <h1 class="display-1">Eveline-R</h1>
-        <p class="align-items-center">Feel the Freedom</p>
+
+    <!--CARD EVELINE-->
+
+    <div class="container">
+
+      <div class="text-center text-lg-start bg-light rounded shadow-sm p-5 pt-4 mt-5">
+          <h1 class="display-1 d-inline-block text-muted align-middle">Eveline-R</h1>
+          <p class="lead d-inline-block mb-0 align-middle"> — Feel the Freedom</p>
+          <hr class="my-2" />
+          <p class="fs-3 fst-italic  text-muted mb-5">Scopri le destinazioni più calde del momento!</p>
+          <a class="btn btn-info btn-lg px-5 fw-bold text-light" href="#day-deal" role="button">Prenota ora</a>
       </div>
-      <hr />
-      <p class="fst-italic fs-4">
-        Scopri le destinazioni più calde del momento!
-      </p>
-      <a href="#" class="btn btn-info text-white mt-4 ps-5 pe-5">Prenota ora</a>
-    </div>
     <!--CARDS SALDI-->
-    <div class="container mt-3">
-      <h4>Saldi</h4>
-      <p class="text-end text-info">Nascondi sezione</p>
+
+    <div class="container mt-5">
+      <div class="d-flex justify-content-between">
+        <h3>Saldi</h3>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-info border-0 align-self-center mb-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWelcomeSummer"
+          aria-expanded="true"
+          aria-controls="collapseExample"
+        >
+          Nascondi sezione
+        </button>
+      </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card border border-info">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
@@ -98,7 +112,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card border border-info">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
@@ -115,7 +129,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card border border-info">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
@@ -132,7 +146,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-md-none d-lg-block">
           <div class="card border border-info">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
@@ -152,20 +166,32 @@
       </div>
     </div>
     <!--CARDS WELCOME SUMMER-->
-    <div class="container mt-3">
-      <h4>Welcome Summer</h4>
-      <p class="text-end text-info">Nascondi sezione</p>
+    <div class="container mt-5">
+      <div class="d-flex justify-content-between">
+        <h3>Welcome Summer</h3>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-info border-0 align-self-center mb-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWelcomeSummer"
+          aria-expanded="true"
+          aria-controls="collapseExample"
+        >
+          Nascondi sezione
+        </button>
+      </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="card">
+        <!--CARD 1-->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top rounded"
               alt="spiaggia"
             />
-            <div class="card-body shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
               <h5 class="card-title">Titolo</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -173,16 +199,21 @@
               </p>
               <a href="#" class="btn btn-info">Prenota</a>
             </div>
+            <span class="badge bg-danger position-absolute end-0 mt-2 me-2"
+              >HOT</span
+            >
           </div>
         </div>
-        <div class="col">
-          <div class="card">
+
+        <!--CARD 2-->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top rounded"
               alt="spiaggia"
             />
-            <div class="card-body shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
               <h5 class="card-title">Titolo</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -190,16 +221,21 @@
               </p>
               <a href="#" class="btn btn-info">Prenota</a>
             </div>
+            <span class="badge bg-danger position-absolute end-0 mt-2 me-2"
+              >HOT</span
+            >
           </div>
         </div>
-        <div class="col">
-          <div class="card">
+
+        <!--CARD 3-->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top rounded"
               alt="spiaggia"
             />
-            <div class="card-body shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
               <h5 class="card-title">Titolo</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -207,16 +243,21 @@
               </p>
               <a href="#" class="btn btn-info">Prenota</a>
             </div>
+            <span class="badge bg-danger position-absolute end-0 mt-2 me-2"
+              >HOT</span
+            >
           </div>
         </div>
-        <div class="col">
-          <div class="card">
+
+        <!--CARD 4-->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top rounded"
               alt="spiaggia"
             />
-            <div class="card-body shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
               <h5 class="card-title">Titolo</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -224,16 +265,21 @@
               </p>
               <a href="#" class="btn btn-info">Prenota</a>
             </div>
+            <span class="badge bg-danger position-absolute end-0 mt-2 me-2"
+              >HOT</span
+            >
           </div>
         </div>
-        <div class="col">
-          <div class="card">
+
+        <!--CARD 5-->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top rounded"
               alt="spiaggia"
             />
-            <div class="card-body shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
               <h5 class="card-title">Titolo</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -241,16 +287,21 @@
               </p>
               <a href="#" class="btn btn-info">Prenota</a>
             </div>
+            <span class="badge bg-danger position-absolute end-0 mt-2 me-2"
+              >HOT</span
+            >
           </div>
         </div>
-        <div class="col">
-          <div class="card">
+
+        <!--CARD 6-->
+        <div class="col-12 col-sm-6 col-xl-4 mb-4">
+          <div class="card shadow-lg border-0">
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top rounded"
               alt="spiaggia"
             />
-            <div class="card-body shadow-lg p-3 bg-body-tertiary rounded">
+            <div class="card-body">
               <h5 class="card-title">Titolo</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
@@ -258,130 +309,175 @@
               </p>
               <a href="#" class="btn btn-info">Prenota</a>
             </div>
+            <span class="badge bg-danger position-absolute end-0 mt-2 me-2"
+              >HOT</span
+            >
           </div>
         </div>
       </div>
     </div>
+
     <!--CARDS OFFERTA DEL GIORNO-->
     <div class="container mt-5">
-      <h4>Offerta del giorno</h4>
+      <div class="row">
+        <div class="col">
+          <h4>Offerta del giorno</h4>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="card">
+        <div class="col-sm-8 mb-3 mb-sm-0 mt-4">
+          <div>
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top shadow mb-5 bg-body-tertiary rounded"
               alt="spiaggia"
             />
           </div>
         </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
+        <div class="col-sm-4 mb-3 mb-sm-0 mt-4">
+          <h2 class="display-3">Fushifaru Maldives</h2>
+          <p class="font-monospace">15.01.2021-31.01.2021</p>
+          <p>Ville a partire da 500 €,</p>
+          <p>non fartele sfuggire!</p>
+          <span class="badge rounded-pill text-bg-dark">Best offer</span>
         </div>
       </div>
     </div>
     <!--CARDS LAST MINUTE-->
-    <div class="container-fluid mt-5">
-      <h4>Last Minute</h4>
-    </div>
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
         <div class="col">
-          <div class="card">
-            <img
-              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top img-fluid"
-              alt="spiaggia"
-            />
-          </div>
-        </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
+          <h4>Last Minute</h4>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col">
-          <div class="card">
+        <div class="col-6 col-md-4 col-lg mb-4">
+          <div>
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top shadow bg-body-tertiary rounded"
               alt="spiaggia"
             />
           </div>
         </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
+
+        <div class="col-6 col-md-4 col-lg mb-4">
+          <div>
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top shadow bg-body-tertiary rounded"
               alt="spiaggia"
             />
           </div>
         </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
+
+        <div class="col-6 col-md-4 col-lg mb-4">
+          <div>
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top shadow bg-body-tertiary rounded"
               alt="spiaggia"
             />
           </div>
         </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
+
+        <div class="col-6 col-md-4 col-lg mb-4">
+          <div>
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top shadow bg-body-tertiary rounded"
               alt="spiaggia"
             />
           </div>
         </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
+
+        <div class="col-6 col-md-4 col-lg mb-4">
+          <div>
             <img
               src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
-              class="card-img-top"
+              class="card-img-top shadow bg-body-tertiary rounded"
               alt="spiaggia"
             />
           </div>
         </div>
-        <div>
-          <h5>Fushifaru Maldives</h5>
+
+        <div class="col-6 col-md-4 col-lg mb-4">
+          <div>
+            <img
+              src="https://cache.marriott.com/marriottassets/marriott/MLEWH/mlewh-wow-oceanhaven-1800-hor-wide.jpg?interpolation=progressive-bilinear&downsize=1440px:*"
+              class="card-img-top shadow bg-body-tertiary rounded"
+              alt="spiaggia"
+            />
+          </div>
         </div>
       </div>
     </div>
+    <!--DICONO DI NOI-->
+
+    <section class="container my-5 pt-5s">
+      <h3 class="text-center">Dicono di noi</h3>
+      <div class="d-flex pb-4">
+        <img
+          class="border border-2 border-info rounded-circle"
+          height="60"
+          src="assets/unnamed.webp"
+        />
+        <div class="px-4">
+          <h6>Username</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex pb-4">
+        <img
+          class="border border-2 border-info rounded-circle"
+          height="60"
+          src="/assets/unnamed.webp"
+        />
+        <div class="px-4">
+          <h6>Username</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex pb-4">
+        <img
+          class="border border-2 border-info rounded-circle"
+          height="60"
+          src="/assets/unnamed.webp"
+        />
+        <div class="px-4">
+          <h6>Username</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
