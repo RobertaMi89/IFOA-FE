@@ -483,12 +483,12 @@ main .line-4 div img {
   border-radius: 16px;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
   border: 2px solid #b278f5;
-  animation-name: animate-from-top-uwxxk1h;
+  animation-name: animate-from-top-uwxxkr9;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 500ms;
 }
-@keyframes animate-from-top-uwxxk1h {
+@keyframes animate-from-top-uwxxkr9 {
   from {
     opacity: 0;
     translate: 0 -50%;
@@ -504,12 +504,81 @@ main .line-4 div img {
   line-height: 0.95;
   margin-bottom: 1rem;
   color: #28064f;
-  animation-name: animate-from-top-uwxxk27;
+  animation-name: animate-from-top-uwxxkro;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-delay: 300ms;
 }
-@keyframes animate-from-top-uwxxk27 {
+@keyframes animate-from-top-uwxxkro {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+.showcase-content p {
+  animation-name: animate-from-top-uwxxkrs;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 300ms;
+  color: #cda8f8;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  padding-inline-end: 3rem;
+}
+@keyframes animate-from-top-uwxxkrs {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+.showcase-content button:first-of-type {
+  animation-name: animate-from-top-uwxxksl;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 900ms;
+}
+@keyframes animate-from-top-uwxxksl {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+.showcase-content button:nth-of-type(2) {
+  animation-name: animate-from-top-uwxxkt1;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1200ms;
+}
+@keyframes animate-from-top-uwxxkt1 {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+.showcase-content button:last-of-type {
+  animation-name: animate-from-top-uwxxktj;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1500ms;
+}
+@keyframes animate-from-top-uwxxktj {
   from {
     opacity: 0;
     translate: 0 10px;
