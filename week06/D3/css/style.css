@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #0e6cff;
+  color: #f4f4f4;
+}
+
+.btn-secondary {
+  background-color: #ff8700;
+  color: #f4f4f4;
+}
+
+.btn-tertiary {
+  background-color: #4caf50;
+  color: #f4f4f4;
+}
+
+.pd--sm {
+  padding: 12px;
+}
+
+.pd--normal {
+  padding: 16px;
+}
+
+.pd--md {
+  padding: 24px;
+}
+
+.pd--lg {
+  padding: 36px;
+}
+
+.pd--xl {
+  padding: 48px;
+}
+
+.pd--xxl {
+  padding: 160px;
+}
+
+.pd-top-sm {
+  padding-top: 12px;
+}
+
+.pd-top-normal {
+  padding-top: 16px;
+}
+
+.pd-top-md {
+  padding-top: 24px;
+}
+
+.pd-top-lg {
+  padding-top: 36px;
+}
+
+.pd-top-xl {
+  padding-top: 48px;
+}
+
+.pd-top-xxl {
+  padding-top: 160px;
+}
+
+.pd-bottom-sm {
+  padding-bottom: 12px;
+}
+
+.pd-bottom-normal {
+  padding-bottom: 16px;
+}
+
+.pd-bottom-md {
+  padding-bottom: 24px;
+}
+
+.pd-bottom-lg {
+  padding-bottom: 36px;
+}
+
+.pd-bottom-xl {
+  padding-bottom: 48px;
+}
+
+.pd-bottom-xxl {
+  padding-bottom: 160px;
+}
+
+.pd-right-sm {
+  padding-right: 12px;
+}
+
+.pd-right-normal {
+  padding-right: 16px;
+}
+
+.pd-right-md {
+  padding-right: 24px;
+}
+
+.pd-right-lg {
+  padding-right: 36px;
+}
+
+.pd-right-xl {
+  padding-right: 48px;
+}
+
+.pd-right-xxl {
+  padding-right: 160px;
+}
+
+.pd-left-sm {
+  padding-left: 12px;
+}
+
+.pd-left-normal {
+  padding-left: 16px;
+}
+
+.pd-left-md {
+  padding-left: 24px;
+}
+
+.pd-left-lg {
+  padding-left: 36px;
+}
+
+.pd-left-xl {
+  padding-left: 48px;
+}
+
+.pd-left-xxl {
+  padding-left: 160px;
+}
+
+.pd-block-sm {
+  padding-block: 12px;
+}
+
+.pd-block-normal {
+  padding-block: 16px;
+}
+
+.pd-block-md {
+  padding-block: 24px;
+}
+
+.pd-block-lg {
+  padding-block: 36px;
+}
+
+.pd-block-xl {
+  padding-block: 48px;
+}
+
+.pd-block-xxl {
+  padding-block: 160px;
+}/*# sourceMappingURL=style.css.map */
