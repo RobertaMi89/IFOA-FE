@@ -44,185 +44,260 @@
               </li>
             </ul>
           </div>
+          <div class="d-flex justify-content-end">
+            <div class="bell-icon rounded-circle position-relative bg-light mt-2 me-2">
+                <i class="bi bi-bell"></i>
+                <span class="dot bg-purple position-absolute top-right"></span>
+            </div>
+            <div class="avatar-icon dropdown  bg-light mt-2">
+               <div class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/avatar-1.jpg" class="rounded-circle position-relative" width="30" height="30">
+                    <span class="dot bg-green position-absolute bottom-right"></span>
+                    <div class="avatar-dropdown dropdown-menu dropdown-menu-end border-0 shadow-lg py-3"
+                        aria-label="User Account">
+                        <div class="d-flex px-3 pb-1" style="gap: 6px">
+                            <div class="avatar-icon rounded-circle position-relative bg-light me-2">
+                              <img src="assets/avatar-1.jpg" class="rounded-circle position-relative" width="30" height="30">
+                              <span class="dot bg-green position-absolute bottom-right"></span>
+                            </div>
+                            <div class="avatar-menu-header">
+                                <h5 class="font-sm mb-0">Annette Black</h5>
+                                <p class="font-sm mb-0 text-muted">annette@geeksui.com</p>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item px-3" href="#">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-user">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span class="ms-2">Profile</span></a>
+                        <a class="dropdown-item px-3" href="#">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-star">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span class="ms-2">Subscription</span></a>
+                        <a class="dropdown-item px-3" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-settings">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>
+                            <span class="ms-2">Settings</span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item px-3" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-power">
+                                <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                                <line x1="12" y1="2" x2="12" y2="12"></line>
+                            </svg>
+                            <span class="ms-2">Sign Out</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
       </nav>
     </div>
   </div>
   <main>
   <!--HERO SECTION-->
-    <div class="container-fluid" style="background-color: #7550fe;">
-      <div class="row py-lg-5">
-        <div class="container col-lg-10 col-md-2 ">
-          <h1 class="text-white">Welcome Web Students!</h1>
-          <p class="lead text-light">Hand-picker Instructor and expertly crafted courses, designed for the modern studens and entrepreneur.</p>
-          <p>
-            <a href="#" class="btn btn-success my-2 p-2">Browse Courses</a>
-            <a href="#" class="btn btn-light my-2 p-2">Are You Instructor?</a>
-          </p>
-          <picture class="d-flex">
-            <img src="assets/hero-img.png" class="img-fluid text-end" alt="profile">
-          </picture>
+  <header class="hero" style="background-color: #7550fe;">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-6 col-lg-5 d-flex py-4">
+                <div class="my-auto">
+                    <h1 class="text-white font-weight-bold">Welcome Dev Students!</h1>
+                    <p class="text-white opacity-50">
+                        Hand-picked Instructor and expertly crafted courses, designed
+                        for the modern students and entrepreneur.</p>
+                    <button class="btn btn-lg mb-1 mb-sm-0 text-white" style="background-color:#1acb98;">Browse Courses</button>
+                    <button class="btn btn-lg btn-light mb-1 mb-sm-0">Are You Instructor?</button>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-lg-6 offset-lg-1 text-center d-flex align-items-end">
+                <img src="assets/hero-img.png" alt="hero image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</header>
+    <!--SECTION BIANCA-->
+    
+    <!--CAROSELLO--> <!--PRIMA RIGA-->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" >
+      <div class="container px-5 px-xl-3">
+        <h2>Recommended to you</h2>
+         <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid bg-light">
+              <div class="container py-3 bg-light">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                  <!--PRIMA CARD-->  
+                  <div class="col">
+                    <div class="card d-flex shadow-sm">
+                      <img src="/assets/course-graphql.jpg" class="img card-img-top" width="50em" height="100%">
+                      <div class="card-body">
+                        <h6 class="card-title">GraphQL:introduction to graphQL for beginners</h6>
+                        <span class="card-text">2h 40m</span><span>Advance</span>
+                        <span>2.5</span><span>(1,500)</span><br>
+                        <span>$500</span><span>$600</span>
+                      </div>
+                      <div class="card d-flex">
+                        <img src="assets/avatar-5.jpg" width="20rem" class="m-1">Brooklyn Simmons
+                        <span><img src="assets/bookmark.svg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--SECONDA CARD--> 
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img src="/assets/course-javascript.jpg" class="img card-img-top" width="50em" height="100%">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                  </div>
+                  <!--TERZA CARD-->
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img src="/assets/course-node.jpg" class="img card-img-top" width="50em" height="100%">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                  </div>
+                  <!--QUARTA CARD-->
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <img src="/assets//course-laravel.jpg" class="img card-img-top" width="50em" height="100%">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-body-secondary">Last updated 3 mins ago</small>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>         
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--CAROSELLO--> <!--SECONDA RIGA-->
+    <div class="container-fluid bg-light d-block">
+      <h3 class="container">Most Popular</h3>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid py-2 bg-light">
+            <div class="container py-3 bg-light">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+                <!--PRIMA CARD-->  
+                <div class="col">
+                  <div class="card d-flex shadow-sm">
+                    <img src="/assets/course-graphql.jpg" class="img card-img-top" width="50em" height="100%">
+                    <div class="card-body">
+                      <h6 class="card-title">GraphQL:introduction to graphQL for beginners</h6>
+                      <span class="card-text">2h 40m</span><span>Advance</span>
+                      <span>2.5</span><span>(1,500)</span><br>
+                      <span>$500</span><span>$600</span>
+                    </div>
+                    <div class="card d-flex">
+                      <img src="assets/avatar-5.jpg" width="20rem" class="m-1">Brooklyn Simmons
+                      <span><img src="assets/bookmark.svg"></span>
+                    </div>
+                  </div>
+                </div>
+                <!--SECONDA CARD--> 
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="/assets/course-javascript.jpg" class="img card-img-top" width="50em" height="100%">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+                <!--TERZA CARD-->
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="/assets/course-node.jpg" class="img card-img-top" width="50em" height="100%">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+                <!--QUARTA CARD-->
+                  <div class="col">
+                    <div class="card shadow-sm">
+                      <img src="/assets//course-laravel.jpg" class="img card-img-top" width="50em" height="100%">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>         
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
         </div>
       </div>
     </div>
-    <!--CAROSELLO--> <!--PRIMA RIGA-->
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container-fluid py-5 bg-light">
-            <div class="container py-5 bg-light">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                <!--PRIMA CARD-->  
-                <div class="col">
-                  <div class="card d-flex shadow-sm">
-                    <img src="/assets/course-graphql.jpg" class="img card-img-top" width="50em" height="100%">
-                    <div class="card-body">
-                      <h6 class="card-title">GraphQL:introduction to graphQL for beginners</h6>
-                      <span class="card-text">2h 40m</span><span>Advance</span>
-                      <span>2.5</span><span>(1,500)</span><br>
-                      <span>$500</span><span>$600</span>
-                    </div>
-                    <div class="card d-flex">
-                      <img src="assets/avatar-5.jpg" width="20rem" class="m-1">Brooklyn Simmons
-                      <span><img src="assets/bookmark.svg"></span>
-                    </div>
-                  </div>
-                </div>
-                <!--SECONDA CARD--> 
-                <div class="col">
-                  <div class="card shadow-sm">
-                    <img src="/assets/course-javascript.jpg" class="img card-img-top" width="50em" height="100%">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </div>
-                  </div>
-                </div>
-                <!--TERZA CARD-->
-                <div class="col">
-                  <div class="card shadow-sm">
-                    <img src="/assets/course-node.jpg" class="img card-img-top" width="50em" height="100%">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </div>
-                  </div>
-                </div>
-                <!--QUARTA CARD-->
-                  <div class="col">
-                    <div class="card shadow-sm">
-                      <img src="/assets//course-laravel.jpg" class="img card-img-top" width="50em" height="100%">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-body-secondary">Last updated 3 mins ago</small>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>         
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-        </div>
-      </div>
-   
-    <!--CAROSELLO--> <!--SECONDA RIGA-->
-    
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container-fluid py-5 bg-light">
-            <div class="container py-5 bg-light">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-                <!--PRIMA CARD-->  
-                <div class="col">
-                  <div class="card d-flex shadow-sm">
-                    <img src="/assets/course-graphql.jpg" class="img card-img-top" width="50em" height="100%">
-                    <div class="card-body">
-                      <h6 class="card-title">GraphQL:introduction to graphQL for beginners</h6>
-                      <span class="card-text">2h 40m</span><span>Advance</span>
-                      <span>2.5</span><span>(1,500)</span><br>
-                      <span>$500</span><span>$600</span>
-                    </div>
-                    <div class="card d-flex">
-                      <img src="assets/avatar-5.jpg" width="20rem" class="m-1">Brooklyn Simmons
-                      <span><img src="assets/bookmark.svg"></span>
-                    </div>
-                  </div>
-                </div>
-                <!--SECONDA CARD--> 
-                <div class="col">
-                  <div class="card shadow-sm">
-                    <img src="/assets/course-javascript.jpg" class="img card-img-top" width="50em" height="100%">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </div>
-                  </div>
-                </div>
-                <!--TERZA CARD-->
-                <div class="col">
-                  <div class="card shadow-sm">
-                    <img src="/assets/course-node.jpg" class="img card-img-top" width="50em" height="100%">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">Last updated 3 mins ago</small>
-                    </div>
-                  </div>
-                </div>
-                <!--QUARTA CARD-->
-                  <div class="col">
-                    <div class="card shadow-sm">
-                      <img src="/assets//course-laravel.jpg" class="img card-img-top" width="50em" height="100%">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      </div>
-                      <div class="card-footer">
-                        <small class="text-body-secondary">Last updated 3 mins ago</small>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>         
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-          </div>
-        </div>
-      </div>
-    
     <!--CAROSELLO--> <!--TERZA RIGA-->
-   
+    <div class="container-fluid bg-light d-block">
+      <h3 class="container">Trending</h3>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="container-fluid py-5 bg-light">
-            <div class="container py-5 bg-light">
+          <div class="container-fluid py-2 bg-light">
+            <div class="container py-3 bg-light">
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
                 <!--PRIMA CARD-->  
                 <div class="col">
@@ -292,6 +367,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
 
 
