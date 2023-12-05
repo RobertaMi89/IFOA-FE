@@ -43,7 +43,6 @@ class Pet{
     }
 }
 
-
 const cane1= new Pet("Pippo","Peppino","Maltese","Manzo")
 const cane2= new Pet ("Pluto","Peppino","Bovaro del Bernese","Pollo")
 
@@ -73,7 +72,6 @@ function formSubmit() {
       alert("Submit non effettuato. Inserisci almeno un carattere");
       return false;
     }
-   
     addPet(document.formPet.petName.value,document.formPet.owner.value,document.formPet.species.value,document.formPet.breed.value)
     document.formPet.reset();
     console.log(pets)
