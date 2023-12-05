@@ -44,14 +44,16 @@ class Pet{
 }
 
 
-const cane1= new Pet("Pippo","Roberta","Maltese","Manzo")
+const cane1= new Pet("Pippo","Peppino","Maltese","Manzo")
 const cane2= new Pet ("Pluto","Peppino","Bovaro del Bernese","Pollo")
 
-function sameOwner(cane1,cane2){
-    if(cane1.ownerName===cane2.ownerName2){
-        console.log =true
+function sameOwner(pet1,pet2){
+    if(pet1.ownerName===pet2.ownerName){
+        console.log(true)
     }
 }
+sameOwner(cane1,cane2);
+
 let pets=[];
 function addPet(petName, owner, species, breed){
     const pet = new Pet (petName,owner,species,breed);
