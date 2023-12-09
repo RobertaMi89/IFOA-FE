@@ -6,30 +6,31 @@
     <title>Esercizio 3 week 7</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
-  <body>
-    <nav class="container-fluid d-flex justify-content-between mt-2 bg-warning-subtle" >
+  <body class="bg-warning-subtle">
+    <nav class="container-fluid d-flex justify-content-between mt-2 bg-warning" >
         <h1>Il nuovo Kindle "Credici e sarà tuo"</h1>
         <div id="cart" class="d-flex ">
-                <button class="btn btn-warning " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 me-2" viewBox="0 0 16 16">
+                <button class="btn btn-outline-light " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 me-2" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
               </svg>
                 Carrello
               </button>
-                <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-                <div class="offcanvas-header">
+                <div class="offcanvas offcanvas-end bg-warning-subtle" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header bg-warning">
                   <h5 class="offcanvas-title" id="staticBackdropLabel">Carrello</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                  <div>
-                    Il tuo carrello è vuoto
-                  </div>
+                <div id="myCart"class="offcanvas-body alert">
+                  <h6>Il tuo carrello:</h6>
+                  <ul id="cartItemsList" class="list-group">
+                    
+                  </ul>
                 </div>
               </div>
         </div>
         </nav>
       </div>
-    <div class="container mt-5 ">
+    <div class="container mt-5">
       <div class="row" id="root">
           
       </div>
