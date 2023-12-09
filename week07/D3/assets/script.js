@@ -116,12 +116,12 @@ function updateCartView(cart) {
 
     if (cart.length > 0) {
         cart.forEach((item) => {
+            let container = document.createElement("div");
+            container.classList.add("d-flex");
             let listItem = document.createElement("li");
             listItem.classList.add("list-group-item");
-
             let img = createImageElement(item);
             listItem.appendChild(img);
-
             let totalAmount = (item.price * item.quantity).toFixed(2);
 
             let text = document.createElement("p");
@@ -152,8 +152,8 @@ function updateCartView(cart) {
             removeButton.innerHTML = "Rimuovi";
             removeButton.addEventListener("click", () => removeCartItem(item.asin));
             listItem.appendChild(removeButton);
-
             cartItemsList.appendChild(listItem);
+
         });
     } else {
         let listItem = document.createElement("li");
@@ -161,6 +161,27 @@ function updateCartView(cart) {
         listItem.innerHTML = "Il tuo carrello è vuoto";
         cartItemsList.appendChild(listItem);
     }
+    //GRAN TOTALE E BOTTONE ACQUISTA
+        let totalAmountContainer = document.createElement("div");
+        totalAmountContainer.classList.add("mt-3");
+
+        let totalAmountText = document.createElement("span");
+        let grandTotal = calculateGrandTotal(cart).toFixed(2);
+        totalAmountText.textContent = `Gran Totale: ${grandTotal}`;
+        totalAmountContainer.appendChild(totalAmountText);
+        cartItemsList.appendChild(totalAmountContainer);
+
+        // Bottone "Acquista"
+        let purchaseButton = document.createElement("button");
+        purchaseButton.classList.add("btn", "btn-success", "mt-3");
+        purchaseButton.textContent = "Acquista";
+        purchaseButton.addEventListener("click", () => purchaseItems(cart));
+        cartItemsList.appendChild(purchaseButton);
+}
+function calculateGrandTotal(cart) {
+    return cart.reduce((total, item) => {
+        return total + item.price * item.quantity;
+    }, 0);
 }
 
 function increaseQuantity(asin) {
