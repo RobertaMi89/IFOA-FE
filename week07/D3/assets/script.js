@@ -22,15 +22,17 @@ function populateCard(data) {
 
 function createCard(book) {
     let card = document.createElement("div");
-    card.setAttribute('id',book.asin)
-    card.classList.add("card");
+    card.setAttribute('id',book.asin);
+    card.classList.add("card","m-3","bg-warning-subtle");
     card.style.width = "18rem";
-    card.classList.add("m-3");
     card.style.display = "inline-block";
 
     let img = document.createElement("img");
     img.src = book.img;
     img.classList.add("card-img-top");
+    img.style.alignItems="center"
+    img.style.width="16rem";
+    img.style.height="22rem";
     img.alt = "copertina libro...";
 
     let cardBody = document.createElement("div");
@@ -43,6 +45,10 @@ function createCard(book) {
     let cardText = document.createElement("p");
     cardText.classList.add("card-text");
     cardText.innerText = book.category;
+
+    let cardPrice = document.createElement("p");
+    cardPrice.classList.add("card-price");
+    cardPrice.innerText = book.price;
 
     let cardLink = document.createElement("a");
     cardLink.classList.add("btn");
@@ -58,6 +64,7 @@ function createCard(book) {
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
+    cardBody.appendChild(cardPrice);
     cardBody.appendChild(cardLink);
     cardBody.appendChild(cardLinkCompra);
 
@@ -69,7 +76,6 @@ function createCard(book) {
 
 function deleteCard(card) {
     card.remove();
-   
 }
 function addToCart(card){
     let itemId= card.getAttribute('id')
