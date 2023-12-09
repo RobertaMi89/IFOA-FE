@@ -5,7 +5,7 @@ fetch(url)
     .then(response => response.json())
     .then(data => populateCard(data));
 
-//funzione per popolare le card nel catalogo
+//POPOLARE LE CARDS NEL CATALOGO
 function populateCard(data) {
     items = data
     data.forEach((book) => {
@@ -21,7 +21,7 @@ function populateCard(data) {
         
     });
 }
-//creare le card
+//CARDS
 function createCard(book) {
     let card = document.createElement("div");
     card.setAttribute('id',book.asin);
@@ -73,11 +73,11 @@ function createCard(book) {
 
     return card;
 }
-//bottone scarta
+//BOTTONE SCARTA
 function deleteCard(card) {
     card.remove();
 }
-//bottone compra ora
+//BOTTONE COMPRA ORA
 function addToCart(card) {
     let itemId = card.getAttribute('id');
     let item = items.find((itm) => itm.asin === itemId);
@@ -99,7 +99,7 @@ function addToCart(card) {
         console.error("Prodotto non trovato");
     }
 }
-//immagine nel carrello
+//IMMAGINE NEL CARRELLO
 function createImageElement(book) {
     let img = document.createElement("img");
     img.src = book.img;
@@ -109,7 +109,7 @@ function createImageElement(book) {
     img.style.height = "auto"; 
     return img;
 }
-//visuae carrello
+//CARRELLO
 function updateCartView(cart) {
     let cartItemsList = document.getElementById("cartItemsList");
     cartItemsList.innerHTML = "";
@@ -124,24 +124,25 @@ function updateCartView(cart) {
 
             let totalAmount = (item.price * item.quantity).toFixed(2);
 
-            let text = document.createElement("span");
-            text.textContent = `${item.title} - Quantità: ${item.quantity} - Prezzo: ${item.price} - Totale: ${totalAmount}`;
+            let text = document.createElement("p");
+            text.textContent = `${item.title} - Qt: ${item.quantity} - Prezzo: ${item.price} - Totale: ${totalAmount}`;
             listItem.appendChild(text);
 
-            //quantità
+            //QUANTITA'
             let increaseButton = document.createElement("button");
             increaseButton.classList.add("btn", "btn-primary", "ms-2");
             increaseButton.textContent = "+";
             increaseButton.addEventListener("click", () => increaseQuantity(item.asin));
             listItem.appendChild(increaseButton);
 
+            //BOTTONE QT
             let decreaseButton = document.createElement("button");
             decreaseButton.classList.add("btn", "btn-primary", "ms-2");
             decreaseButton.textContent = "-";
             decreaseButton.addEventListener("click", () => decreaseQuantity(item.asin));
             listItem.appendChild(decreaseButton);
 
-            //bottone Rimuovi
+            //BOTTONE RIMUOVI
             let removeButton = document.createElement("button");
             removeButton.classList.add("btn", "btn-danger", "ms-2");
             removeButton.textContent = "Rimuovi";
@@ -185,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     updateCartView(cart);
 });
-//rimuovere con un ckick l'intero stock dell'articolo
+//UN CLICK PER RIMUOVERE INTERO ARTICOLO
 function removeCartItem(asin) {
     let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
   
