@@ -53,12 +53,12 @@ function createCard(book) {
     cardPrice.innerText = book.price;
 
     let cardLink = document.createElement("a");
-    cardLink.classList.add("btn","btn-danger");
+    cardLink.classList.add("btn","btn-danger","ms-2");
     cardLink.href = "#";
     cardLink.innerText = "Scarta";
 
     let cardLinkCompra = document.createElement("a");
-    cardLinkCompra.classList.add("btn","btn-success");
+    cardLinkCompra.classList.add("btn","btn-success","ms-2");
     cardLinkCompra.href = "#";
     cardLinkCompra.innerText = "Compra ora";
 
@@ -125,27 +125,31 @@ function updateCartView(cart) {
             let totalAmount = (item.price * item.quantity).toFixed(2);
 
             let text = document.createElement("p");
-            text.textContent = `${item.title} - Qt: ${item.quantity} - Prezzo: ${item.price} - Totale: ${totalAmount}`;
+            text.innerHTML = `<strong>${item.title}</strong> - Prezzo: ${item.price}`;
             listItem.appendChild(text);
 
             //QUANTITA'
+            let qt=document.createElement("p")
+            qt.innerHTML = `Qt: ${item.quantity} - Totale: ${totalAmount}`;
+            listItem.appendChild(qt);
+
             let increaseButton = document.createElement("button");
             increaseButton.classList.add("btn", "btn-primary", "ms-2");
-            increaseButton.textContent = "+";
+            increaseButton.innerHTML = "+";
             increaseButton.addEventListener("click", () => increaseQuantity(item.asin));
             listItem.appendChild(increaseButton);
 
             //BOTTONE QT
             let decreaseButton = document.createElement("button");
             decreaseButton.classList.add("btn", "btn-primary", "ms-2");
-            decreaseButton.textContent = "-";
+            decreaseButton.innerHTML = "-";
             decreaseButton.addEventListener("click", () => decreaseQuantity(item.asin));
             listItem.appendChild(decreaseButton);
 
             //BOTTONE RIMUOVI
             let removeButton = document.createElement("button");
             removeButton.classList.add("btn", "btn-danger", "ms-2");
-            removeButton.textContent = "Rimuovi";
+            removeButton.innerHTML = "Rimuovi";
             removeButton.addEventListener("click", () => removeCartItem(item.asin));
             listItem.appendChild(removeButton);
 
@@ -154,7 +158,7 @@ function updateCartView(cart) {
     } else {
         let listItem = document.createElement("li");
         listItem.classList.add("list-group-item");
-        listItem.textContent = "Il tuo carrello è vuoto";
+        listItem.innerHTML = "Il tuo carrello è vuoto";
         cartItemsList.appendChild(listItem);
     }
 }
