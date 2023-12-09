@@ -134,26 +134,25 @@ function updateCartView(cart) {
             listItem.appendChild(qt);
 
             let increaseButton = document.createElement("button");
-            increaseButton.classList.add("btn", "btn-primary", "ms-2");
+            increaseButton.classList.add("btn", "btn-primary","btn-sm", "ms-2");
             increaseButton.innerHTML = "+";
             increaseButton.addEventListener("click", () => increaseQuantity(item.asin));
             listItem.appendChild(increaseButton);
 
             //BOTTONE QT
             let decreaseButton = document.createElement("button");
-            decreaseButton.classList.add("btn", "btn-primary", "ms-2");
+            decreaseButton.classList.add("btn", "btn-primary","btn-sm", "ms-2");
             decreaseButton.innerHTML = "-";
             decreaseButton.addEventListener("click", () => decreaseQuantity(item.asin));
             listItem.appendChild(decreaseButton);
 
             //BOTTONE RIMUOVI
             let removeButton = document.createElement("button");
-            removeButton.classList.add("btn", "btn-danger", "ms-2");
+            removeButton.classList.add("btn", "btn-danger", "btn-sm","ms-2");
             removeButton.innerHTML = "Rimuovi";
             removeButton.addEventListener("click", () => removeCartItem(item.asin));
             listItem.appendChild(removeButton);
             cartItemsList.appendChild(listItem);
-
         });
     } else {
         let listItem = document.createElement("li");
@@ -161,20 +160,21 @@ function updateCartView(cart) {
         listItem.innerHTML = "Il tuo carrello è vuoto";
         cartItemsList.appendChild(listItem);
     }
-    //GRAN TOTALE E BOTTONE ACQUISTA
+    //GRAN TOTALE IN FONDO AL CARRELLO
         let totalAmountContainer = document.createElement("div");
         totalAmountContainer.classList.add("mt-3");
 
         let totalAmountText = document.createElement("span");
         let grandTotal = calculateGrandTotal(cart).toFixed(2);
-        totalAmountText.textContent = `Gran Totale: ${grandTotal}`;
+        totalAmountContainer.classList.add("bg-light","align-middle");
+        totalAmountText.innerHTML = `<strong>Gran Totale: ${grandTotal}</strong>`;
         totalAmountContainer.appendChild(totalAmountText);
         cartItemsList.appendChild(totalAmountContainer);
 
-        // Bottone "Acquista"
+        // BOTTONE ACQUISTA
         let purchaseButton = document.createElement("button");
         purchaseButton.classList.add("btn", "btn-success", "mt-3");
-        purchaseButton.textContent = "Acquista";
+        purchaseButton.innerHTML = "Acquista";
         purchaseButton.addEventListener("click", () => purchaseItems(cart));
         cartItemsList.appendChild(purchaseButton);
 }
