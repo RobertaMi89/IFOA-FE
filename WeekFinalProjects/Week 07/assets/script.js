@@ -1,76 +1,119 @@
-const searchApiUrl = "https://striveschool-api.herokuapp.com/api/product/";
+const url = "https://striveschool-api.herokuapp.com/api/product/";
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let loadImagesBtn = document.getElementById("loadImagesBtn");
-//     let loadSecondImagesBtn = document.getElementById("loadSecondImagesBtn");
-//     let searchBtn = document.getElementById("searchBtn");
-  
-//     loadImagesBtn.addEventListener("click", function () {
-//       filteredGetList("query","sunset");
-//     });
-//     loadSecondImagesBtn.addEventListener("click", function () {
-//       filteredGetList("query","dogs");
-//     });
-//     searchBtn.addEventListener("click",function(){
-//       filteredGetList("query",document.getElementById("searchText").value)
-//     })
-//   });
+async function init() {
+  document.addEventListener("DOMContentLoaded", async function () {
+    let response = await fetch(url, {
+      method: "GET",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4Mjk5OWMwNTgzNTAwMTg1MjJkMGQiLCJpYXQiOjE3MDIzNzM3ODUsImV4cCI6MTcwMzU4MzM4NX0.lagYhe-XGk23aIEHYFxlxeexsEQuOHwjWxWKLQKQ2UY",
+      },
+    });
 
-// function filteredGetList(paramKey,paramValue){
-//     let params = new URLSearchParams([[paramKey,paramValue]]).toString();
+    populateCard(await response.json());
+  });
+}
+let items;
 
-//     return getList(params)
-// }
+//POPOLARE LE CARDS NEL CATALOGO
+function populateCard(data) {
+  items = data;
+  data.forEach((cell) => {
+    let card = createCard(cell);
+    document.querySelector("#root").appendChild(card);
 
-function getList(queryParams) {
-    let url = queryParams ? `${searchApiUrl}?${queryParams}` : searchApiUrl;
-    fetch(url, {
-        method: "GET",
-        headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4Mjk5OWMwNTgzNTAwMTg1MjJkMGQiLCJpYXQiOjE3MDIzNzM3ODUsImV4cCI6MTcwMzU4MzM4NX0.lagYhe-XGk23aIEHYFxlxeexsEQuOHwjWxWKLQKQ2UY",
-        },
-    })
-    .then((response) => response.json())
-    .then((data) => {
-        const images = data;
+    let modificaButton = card.querySelector(".btn-warning");
+    modificaButton.addEventListener(
+      "click",
+      () => (window.location.href = "form.html?action=update")
+    );
 
-        const imagesContainer = document.getElementById("imagesContainer");
+    let scopriButton = card.querySelector(".btn-info");
+    scopriButton.addEventListener("click", () => scopri(card));
+  });
+}
+//CARDS
+function createCard(cell) {
+  let card = document.createElement("div");
+  card.setAttribute("id", cell);
+  card.classList.add("card", "m-3");
+  card.style.width = "18rem";
+  card.style.display = "inline-block";
 
-        imagesContainer.innerHTML = "";
+  let img = document.createElement("img");
+  img.src = cell.imageUrl;
+  img.classList.add("card-img-top");
+  img.style.alignItems = "center";
+  img.style.width = "16rem";
+  img.style.height = "auto";
+  img.alt = "cellulare...";
 
-        images.forEach((image) => {
-          
-            const card = document.createElement("div");
-            card.className = "col-md-4";
-            card.classList.add("card", "mb-4", "shadow-sm");
+  let cardBody = document.createElement("div");
+  cardBody.classList.add("card-body");
 
-            const imageElement = document.createElement("img");
-            imageElement.src = `assets/${image.imageUrl}`;  
-          
-            imageElement.className = "card-img-top"; 
-            card.appendChild(imageElement);
+  let cardName = document.createElement("h5");
+  cardName.classList.add("card-name");
+  cardName.innerHTML = cell.name;
 
-            const cardBody = document.createElement("div");
-            cardBody.className = "card-body";
+  let cardDescription = document.createElement("p");
+  cardDescription.classList.add("card-description");
+  cardDescription.innerText = cell.description;
 
-            const titleElement = document.createElement("h5");
-            titleElement.className = "card-title";
-           
-            const textElement = document.createElement("p");
-            textElement.className = "card-text";
-          
-            cardBody.appendChild(titleElement);
-            cardBody.appendChild(textElement);
+  let cardBrand = document.createElement("p");
+  cardBrand.classList.add("card-description");
+  cardBrand.innerText = cell.brand;
 
-            card.appendChild(cardBody);
+  let cardPrice = document.createElement("p");
+  cardPrice.classList.add("card-price");
+  cardPrice.innerText = cell.price;
 
-            imagesContainer.appendChild(card);
-        });
-    })
-    .catch((error) => console.error("Error fetching images:", error));
+  let cardImgUrl = document.createElement("p");
+  cardImgUrl.classList.add("card-description");
+  cardImgUrl.innerHTML = cell.imageUrl;
+
+  let cardModifica = document.createElement("a");
+  cardModifica.classList.add("btn", "btn-warning", "ms-2");
+  cardModifica.href = "#";
+  cardModifica.innerText = "Modifica";
+
+  let cardScopri = document.createElement("a");
+  cardScopri.classList.add("btn", "btn-info", "ms-2");
+  cardScopri.href = "#";
+  cardScopri.innerText = "Scopri di più";
+
+  cardBody.appendChild(cardName);
+  cardBody.appendChild(cardDescription);
+  cardBody.appendChild(cardPrice);
+  cardBody.appendChild(cardModifica);
+  cardBody.appendChild(cardScopri);
+
+  card.appendChild(img);
+  card.appendChild(cardBody);
+
+  return card;
 }
 
-//   function hideCard(card) {
-//     card.style.display = "none";
-//   }
-  
+//BOTTONE SCOPRI DI PIU'
+function scopri(card) {
+  let itemId = card.getAttribute("id");
+  let item = items.find((itm) => itm.id === itemId);
+
+  if (item) {
+    let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+    let existingItem = cart.find((cartItem) => cartItem.id === itemId);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      item.quantity = 1;
+      cart.push(item);
+    }
+    localStorage.setItem("shoppingCart", JSON.stringify(cart));
+    updateCartView(cart);
+  } else {
+    console.error("Prodotto non trovato");
+  }
+}
+
+init();
