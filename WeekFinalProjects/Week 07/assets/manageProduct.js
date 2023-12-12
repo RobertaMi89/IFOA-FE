@@ -5,10 +5,18 @@ let action = urlParams.get("action") || "create";
 const prodId = urlParams.get("prodId");
 
 document.addEventListener("DOMContentLoaded", function () {
+  let deleteBtn = document.getElementById("deleteBtn");
+  deleteBtn.addEventListener("click", () => {
+    del();
+  });
+
   if (action === "update" && prodId) {
+    if (deleteBtn.hasAttribute("hidden")) deleteBtn.removeAttribute("hidden");
     loadFormFromStorageObject(prodId);
   } else {
     action = "create";
+    if (!deleteBtn.hasAttribute("hidden"))
+      deleteBtn.setAttribute("hidden", "true");
   }
 
   toggleAction(action);
@@ -81,6 +89,21 @@ async function update() {
 
   if (response.status == 200) alert("Prodotto aggiornato");
   else alert("Errore durante l'aggiornamento del prodotto");
+}
+
+async function del() {
+  let response = await fetch(`${url}/${prodId}`, {
+    method: "DELETE",
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4Mjk5OWMwNTgzNTAwMTg1MjJkMGQiLCJpYXQiOjE3MDIzNzM3ODUsImV4cCI6MTcwMzU4MzM4NX0.lagYhe-XGk23aIEHYFxlxeexsEQuOHwjWxWKLQKQ2UY",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(buildProductFromForm()),
+  });
+
+  if (response.status == 200) alert("Prodotto eliminato");
+  else alert("Errore durante l'eliminazione del prodotto");
 }
 
 function buildProductFromForm() {
