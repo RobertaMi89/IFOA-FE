@@ -40,8 +40,14 @@ function createCard(cell) {
   card.style.width = "18rem";
   card.style.display = "inline-block";
 
-  let imageContainer = document.createElement("img-container");
-  imageContainer.classList.add("container");
+  let imageContainer = document.createElement("div");
+  imageContainer.className = "container mt-5";
+  let imageRow = document.createElement("div");
+  imageRow.className = "row justify-content-center";
+  let imageCol = document.createElement("div");
+  imageCol.classList.add("col-md-6");
+  let imageCenter = document.createElement("div");
+  imageCenter.classList.add("text-center");
 
   let img = document.createElement("img");
   img.src = cell.imageUrl;
@@ -91,7 +97,10 @@ function createCard(cell) {
   cardBody.appendChild(cardModifica);
   cardBody.appendChild(cardScopri);
 
-  imageContainer.appendChild(img);
+  imageCenter.appendChild(img);
+  imageCol.appendChild(imageCenter);
+  imageRow.appendChild(imageCol);
+  imageContainer.appendChild(imageRow);
   card.appendChild(imageContainer);
   card.appendChild(cardBody);
 
