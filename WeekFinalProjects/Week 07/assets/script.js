@@ -23,10 +23,10 @@ function populateCard(data) {
     document.querySelector("#root").appendChild(card);
 
     let modificaButton = card.querySelector(".btn-warning");
-    modificaButton.addEventListener(
-      "click",
-      () => (window.location.href = "form.html?action=update")
-    );
+    modificaButton.addEventListener("click", () => {
+      window.location.href = `form.html?action=update&prodId=${cell._id}`;
+      sessionStorage.setItem(cell._id, JSON.stringify(cell));
+    });
 
     let scopriButton = card.querySelector(".btn-info");
     scopriButton.addEventListener("click", () => scopri(card));
