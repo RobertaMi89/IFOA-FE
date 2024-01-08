@@ -5,15 +5,14 @@ import './App.css'
 import ButtonComponent from './components/ButtonComponent'
 import ImageComponent from './components/ImageComponent'
 
-
 function App() {
-  const [count, setCount] = useState(0)
+  const [showImage, SetShowImage] = useState(true)
 
   return (
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <ImageComponent src={viteLogo} myClass="vite logo" alt={"vite logo"}/>
+          {showImage && <ImageComponent src={viteLogo} myClass="vite logo" alt={"vite logo"}/>}
         </a>
         <a href="https://react.dev" target="_blank">
           <ImageComponent src={reactLogo} myClass="react logo" alt={"react logo"}/>
@@ -21,7 +20,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <ButtonComponent text="Button"/>
+        <ButtonComponent text="Button" btn={()=>{SetShowImage(!showImage)}}/>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

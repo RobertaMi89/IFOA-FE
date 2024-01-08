@@ -1,6 +1,6 @@
-const ButtonComponent =({text})=>{
+const ButtonComponent =({text, btn})=>{
     return(
-        <button>{text}</button>
+        <button onClick={btn}>{text}</button>
     )
 }
 export default ButtonComponent
