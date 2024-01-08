@@ -18,9 +18,9 @@ function App() {
           <ImageComponent src={reactLogo} myClass="react logo" alt={"react logo"}/>
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Esercizio IFOA</h1>
       <div className="card">
-        <ButtonComponent text="Button" btn={()=>{SetShowImage(!showImage)}}/>
+        <ButtonComponent text="Cliccami" btn={()=>{SetShowImage(!showImage)}}/>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
