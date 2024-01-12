@@ -1,7 +1,11 @@
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+
 const CustomDropDown = () => {
   return (
     <>
-      <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-end text-dropdown-item">
         <div className="search position-relative mt-2 me-2">
           <a href="#" role="button" className="text-white">
             <svg
@@ -17,7 +21,7 @@ const CustomDropDown = () => {
           </a>
         </div>
 
-        <div className="align-middle position-relative mx-3 my-2">
+        <div className="aDropdown.Itemgn-middle position-relative mx-3 my-2">
           <a
             href="#"
             role="button"
@@ -56,46 +60,52 @@ const CustomDropDown = () => {
               id="avatar"
             />
           </button>
-          <ul className="dropdown-menu dropdown-menu-end dropdown-menu-dark">
-            <li>
-              <a className="dropdown-item" href="./profile.html">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="../src/assets/avatar.png"
-                    id="avatar-small"
-                    width="30"
-                    height="30"
-                  />
-                  Roberta
-                </div>
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="./profile.html">
-                Manage Profiles
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="./account.html">
-                Account
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Help Center
-              </a>
-            </li>
-            <li>
-              <hr className="dropdown-divider" />
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Signout Netflix
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
+      <Dropdown>
+        <Dropdown.Toggle
+          variant="trasparent text-light"
+          id="dropdown-basic"
+        ></Dropdown.Toggle>
+
+        <Dropdown.Menu className="dropdown-menu-end bg-dark">
+          <Dropdown.Item>
+            <a className="dropdown-item " href="./profile.html">
+              <div className="d-flex dropdown-item align-items-center text-light">
+                <img
+                  src="../src/assets/avatar.png"
+                  id="avatar-small"
+                  width="30"
+                  height="30"
+                  className="mx-3"
+                />
+                Roberta
+              </div>
+            </a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a className="dropdown-item text-light" href="./profile.html">
+              Manage Profiles
+            </a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a className="dropdown-item text-light" href="./account.html">
+              Account
+            </a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <a className="dropdown-item text-light" href="#">
+              Help Center
+            </a>
+          </Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item>
+            <a className="dropdown-item text-light" href="#">
+              Signout Netfix
+            </a>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </>
   );
 };

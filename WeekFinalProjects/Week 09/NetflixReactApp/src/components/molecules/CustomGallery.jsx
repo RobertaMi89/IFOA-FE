@@ -13,14 +13,14 @@ const CustomGallery = ({ url }) => {
   }, []);
 
   return (
-    <div className="mx-5">
+    <div className="mx-5 text-center">
       {movies.map((movie) => (
         <img
           key={movie.imbID}
           src={movie.Poster}
           alt={movie.Title}
           width={150}
-          className="m-1"
+          className="mx-2"
         />
       ))}
     </div>
