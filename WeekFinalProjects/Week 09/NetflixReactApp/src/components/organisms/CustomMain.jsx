@@ -10,7 +10,7 @@ const CustomMain = () => {
           <CustomGallery url="http://www.omdbapi.com/?apikey=8eaa5d18&s=harry%20potter" />
         </Container>
         <Container fluid className="p-3">
-          <h4 className="text-light">Attack on Titan</h4>
+          <h4 className="text-light">Star Wars</h4>
           <CustomGallery url="http://www.omdbapi.com/?apikey=cf9516cd&s=star%20wars" />
         </Container>
         <Container fluid className="p-3">

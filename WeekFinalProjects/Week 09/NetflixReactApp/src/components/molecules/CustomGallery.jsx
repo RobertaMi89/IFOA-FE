@@ -20,6 +20,7 @@ const CustomGallery = ({ url }) => {
           src={movie.Poster}
           alt={movie.Title}
           width={150}
+          height={200}
           className="mx-2"
         />
       ))}
