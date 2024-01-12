@@ -21,7 +21,7 @@ const CustomDropDown = () => {
           </a>
         </div>
 
-        <div className="aDropdown.Itemgn-middle position-relative mx-3 my-2">
+        <div className="dropdown-item align-middle position-relative mx-3 my-2">
           <a
             href="#"
             role="button"
@@ -71,7 +71,7 @@ const CustomDropDown = () => {
         <Dropdown.Menu className="dropdown-menu-end bg-dark">
           <Dropdown.Item>
             <a className="dropdown-item " href="./profile.html">
-              <div className="d-flex dropdown-item align-items-center text-light">
+              <div className="d-flex dropdown-item align-items-center text-secondary">
                 <img
                   src="../src/assets/avatar.png"
                   id="avatar-small"
@@ -84,23 +84,23 @@ const CustomDropDown = () => {
             </a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a className="dropdown-item text-light" href="./profile.html">
+            <a className="dropdown-item text-secondary" href="./profile.html">
               Manage Profiles
             </a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a className="dropdown-item text-light" href="./account.html">
+            <a className="dropdown-item text-secondary" href="./account.html">
               Account
             </a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <a className="dropdown-item text-light" href="#">
+            <a className="dropdown-item text-secondary" href="#">
               Help Center
             </a>
           </Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item>
-            <a className="dropdown-item text-light" href="#">
+            <a className="dropdown-item text-secondary" href="#">
               Signout Netfix
             </a>
           </Dropdown.Item>

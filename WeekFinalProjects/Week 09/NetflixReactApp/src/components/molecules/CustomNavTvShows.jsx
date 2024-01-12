@@ -5,11 +5,11 @@ const CustomTvShows = () => {
     <>
       <div className="navbar navbar-expand-lg bg-dark ">
         <Container fluid>
-          <a className="navbar-brand text-white" href="#">
+          <a className="navbar-brand text-light" href="#">
             <h3>Tv Shows</h3>
           </a>
           <button
-            className="navbar-toggler "
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
