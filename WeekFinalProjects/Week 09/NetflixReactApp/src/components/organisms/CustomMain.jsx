@@ -11,7 +11,7 @@ const CustomMain = () => {
         </Container>
         <Container fluid className="p-3">
           <h4 className="text-light">Attack on Titan</h4>
-          <CustomGallery url="http://www.omdbapi.com/?apikey=cf9516cd&s=attack+on+titan" />
+          <CustomGallery url="http://www.omdbapi.com/?apikey=cf9516cd&s=star%20wars" />
         </Container>
         <Container fluid className="p-3">
           <h4 className="text-light">The Lord of the Rings</h4>
