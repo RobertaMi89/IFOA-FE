@@ -1,10 +1,11 @@
 import CustomNavBar from "../molecules/CustomNavBar";
+import CustomHeader from "../organisms/CustomHeader";
 
-const CustomHeader = () => {
+const CustomMyList = () => {
   return (
     <>
       <CustomNavBar />
     </>
   );
 };
-export default CustomHeader;
+export default CustomMyList;

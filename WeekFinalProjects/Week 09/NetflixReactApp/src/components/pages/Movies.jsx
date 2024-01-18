@@ -1,10 +1,10 @@
 import CustomNavBar from "../molecules/CustomNavBar";
 
-const CustomHeader = () => {
+const CustomMovies = () => {
   return (
     <>
       <CustomNavBar />
     </>
   );
 };
-export default CustomHeader;
+export default CustomMovies;

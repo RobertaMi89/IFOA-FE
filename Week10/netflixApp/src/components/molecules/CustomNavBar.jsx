@@ -1,8 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import CustomDropDown from "../atoms/CustomDropDown";
-import { Link } from "react-router-dom";
+import CustomDropDown from "../../components/atoms/CustomDropDown";
 
 const CustomNavBar = () => {
   return (
@@ -14,21 +13,21 @@ const CustomNavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to={"/"} className="text-secondary">
+            <Nav.Link className="text-secondary" href="#home">
               Home
-            </Link>
-            <Link to={"/tv-shows"} className="text-secondary">
+            </Nav.Link>
+            <Nav.Link className="text-secondary" href="#Nav.Link">
               Tv Shows
-            </Link>
-            <Link to={"/movies"} className="text-secondary">
+            </Nav.Link>
+            <Nav.Link className="text-secondary" href="#home">
               Movies
-            </Link>
-            <Link to={"/recently-added"} className="text-secondary">
+            </Nav.Link>
+            <Nav.Link className="text-secondary" href="#Nav.Link">
               Recently Added
-            </Link>
-            <Link to={"/my-list"} className="text-secondary">
+            </Nav.Link>
+            <Nav.Link className="text-secondary" href="#home">
               My List
-            </Link>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <CustomDropDown />

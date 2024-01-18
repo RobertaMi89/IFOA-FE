@@ -1,7 +1,4 @@
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import { Link } from "react-router-dom";
 
 const CustomDropDown = () => {
   return (
@@ -85,25 +82,25 @@ const CustomDropDown = () => {
             </a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <Link className="dropdown-item text-secondary" to="/profile">
+            <a className="dropdown-item text-secondary" href="./profile.html">
               Manage Profiles
-            </Link>
+            </a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <Link className="dropdown-item text-secondary" to="/account">
+            <a className="dropdown-item text-secondary" href="./account.html">
               Account
-            </Link>
+            </a>
           </Dropdown.Item>
           <Dropdown.Item>
-            <Link className="dropdown-item text-secondary" to="/help-center">
+            <a className="dropdown-item text-secondary" href="#">
               Help Center
-            </Link>
+            </a>
           </Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item>
-            <Link className="dropdown-item text-secondary" to="/exit">
+            <a className="dropdown-item text-secondary" href="#">
               Signout Netfix
-            </Link>
+            </a>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
