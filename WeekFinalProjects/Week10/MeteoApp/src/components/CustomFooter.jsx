@@ -66,7 +66,12 @@ const CustomFooter = ({ cityForecast }) => {
 
   const renderLineChart = (
     <Container className="m-0 p-0 mt-2">
-      <LineChart width={1100} height={200} data={dataForecast}>
+      <LineChart
+        width={1100}
+        height={200}
+        data={dataForecast}
+        style={{ width: "95%" }}
+      >
         <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" wi />
         <XAxis dataKey="date" />

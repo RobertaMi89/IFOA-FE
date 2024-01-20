@@ -7,7 +7,11 @@ const Cards = ({ cityData }) => {
       {dataExists ? (
         <Container className="pt-3 ">
           <Col xs={6} md={6}>
-            <h3 className="text-dark mb-4">{cityData.name}</h3>
+            <h2 className="text-dark mb-2 ms-5">
+              <b>
+                {cityData.name},{cityData.sys.country}
+              </b>
+            </h2>
           </Col>
           <Row xs={1} md={2} className="g-4">
             <Col className="d-flex justify-content-center">
@@ -15,7 +19,7 @@ const Cards = ({ cityData }) => {
                 meteoProp={{
                   name: "Wind Speed",
                   value: cityData.wind.speed + " km/h",
-                  icon: "./src/assets/media/icon/windicon.png",
+                  icon: "./src/assets/media/icon/studio-ghibpioggiaicon.png",
                 }}
                 bgImg={"./src/assets/media/si-alza-il-vento.jpg"}
               />

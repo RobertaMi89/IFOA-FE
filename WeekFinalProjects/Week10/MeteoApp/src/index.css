@@ -3,6 +3,8 @@ body,
 p {
   margin: 0;
   padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .app {
   width: 100%;
@@ -22,7 +24,6 @@ p {
   z-index: -1;
 }
 .logo {
-  background: url("./assets/media/logometeo.png") no-repeat center center/cover;
-  width: 300px;
+  background: url("./assets/media/banner1.png") no-repeat center center/contain;
   height: 240px;
 }

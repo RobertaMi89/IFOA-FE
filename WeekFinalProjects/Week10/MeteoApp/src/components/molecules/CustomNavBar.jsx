@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Cards from "../Cards";
 import fetchData from "../../utils/FetchData";
+import Banner from "../molecules/Banner";
 import "../../index.css";
 
 export const CustomNavBar = () => {
@@ -19,19 +20,25 @@ export const CustomNavBar = () => {
     navigate("/details", { state: { location } });
   };
 
-  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=roma&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
+  const searchLocation = async () => {
+    try {
+      let data = await fetchData(urlData);
+
+      setCity(data);
+      console.log(data);
+    } catch (error) {
+      console.error("Errore durante la ricerca della posizione:", error);
+    }
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    if (event.code === "Enter") handleButtonClick();
+  };
+
+  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=roma,it&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
 
   useEffect(() => {
-    const searchLocation = async () => {
-      try {
-        let data = await fetchData(urlData);
-
-        setCity(data);
-        console.log(data);
-      } catch (error) {
-        console.error("Errore durante la ricerca della posizione:", error);
-      }
-    };
     searchLocation();
   }, []);
 
@@ -40,35 +47,40 @@ export const CustomNavBar = () => {
       <Navbar>
         <Container fluid className="d-flex ">
           <Nav style={{ maxHeight: "100px" }} navbarScroll></Nav>
-          <Container className="trasparent">
-            <Container className="logo d-flex align-items-end justify-content-around">
-              <h1 className="text-dark text-center ">Meteo Ghibli</h1>
-            </Container>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                value={location}
-                placeholder="Enter Location"
-                className="me-2"
-                onChange={(event) => setLocation(event.target.value)}
-                aria-label="Search"
-              />
-              <Button
-                style={{ backgroundColor: "transparent", border: "none" }}
-                onClick={() => handleButtonClick()}
+          <Container>
+            <Banner />
+            <Container style={{ width: "100%" }}>
+              <Form
+                className="d-flex justify-content-center mt-2"
+                onSubmit={(event) => handleFormSubmit(event)}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-search text-dark"
-                  viewBox="0 0 16 16"
+                <Form.Control
+                  style={{ width: "30%" }}
+                  type="search"
+                  value={location}
+                  placeholder="Enter Location"
+                  className="me-2"
+                  onChange={(event) => setLocation(event.target.value)}
+                  onKeyUp={(event) => handleFormSubmit(event)}
+                  aria-label="Search"
+                />
+                <Button
+                  style={{ backgroundColor: "transparent", border: "none" }}
+                  onClick={() => handleButtonClick()}
                 >
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-              </Button>
-            </Form>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-search text-dark"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                  </svg>
+                </Button>
+              </Form>
+            </Container>
           </Container>
         </Container>
       </Navbar>
