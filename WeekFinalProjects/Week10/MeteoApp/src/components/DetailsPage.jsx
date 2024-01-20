@@ -1,27 +1,46 @@
 import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import fetchData from "../utils/FetchData";
+import Cards from "./Cards";
+export const DetailsPage = () => {
+  const [forecast, setForecast] = useState(null);
+  const { state } = useLocation();
 
-const DetailsPage = async () => {
-  const location = useLocation();
-  const { state } = location;
+  const [city, setCity] = useState({});
 
-  const dataObject = state && state.data && Object.keys(state.data).length > 0;
+  const urlData = `https://api.openweathermap.org/data/2.5/weather?q=${state.location}&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
 
-  let urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${state.data.name}&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
+  useEffect(() => {
+    const searchLocation = async () => {
+      try {
+        let data = await fetchData(urlData);
 
-  let cityForecast = await fetchData(urlForecast);
-  console.log("state", state.data);
-  console.log(cityForecast);
+        setCity(data);
+      } catch (error) {
+        console.error("Errore durante la ricerca della posizione:", error);
+      }
+    };
+    const fetchForecastData = async () => {
+      try {
+        const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${state.location}&appid=4bb0ca7fe3d82827c0b62fca86878ab2&units=metric`;
+        const response = await fetchData(urlForecast);
+        setForecast(response);
+      } catch (error) {
+        console.error("Error fetching forecast data:", error);
+      }
+    };
+
+    if (state && state.location) {
+      searchLocation();
+      fetchForecastData();
+    }
+  }, [state]);
+
   return (
     <div>
-      {dataObject ? (
-        <>
-          <p>Nome: {cityForecast.city.name}</p>
-          {/* Altri dati... */}
-        </>
-      ) : (
-        <p>Nessun dato disponibile.</p>
-      )}
+      <>
+        {city && forecast && <Cards cityData={city} cityForecast={forecast} />}
+      </>
     </div>
   );
 };

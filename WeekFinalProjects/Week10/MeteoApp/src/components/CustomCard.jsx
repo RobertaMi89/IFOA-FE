@@ -1,17 +1,15 @@
-import ButtonDetails from "./atoms/ButtonDetails";
 import Card from "react-bootstrap/Card";
 
-export const CustomCard = ({ cityData }) => {
+export const CustomCard = ({ meteoProp }) => {
   return (
     <>
       <Card style={{ width: "18rem" }}>
         <Card.Body>
-          <Card.Title>{cityData.name}</Card.Title>
+          <Card.Title>{meteoProp.name}</Card.Title>
           <Card.Text>
-            Celsius: {cityData.celsius}°<br /> Weather: {cityData.weather}
-            <br />
+            <img src={meteoProp.icon}></img>
+            {meteoProp.value}
           </Card.Text>
-          <ButtonDetails cityData={cityData} />
         </Card.Body>
       </Card>
     </>
