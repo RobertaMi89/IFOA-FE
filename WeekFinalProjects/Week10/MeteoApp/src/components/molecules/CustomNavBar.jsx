@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Cards from "../Cards";
 import fetchData from "../../utils/FetchData";
+import "../../index.css";
 
 export const CustomNavBar = () => {
   const [location, setLocation] = useState("");
@@ -36,10 +37,13 @@ export const CustomNavBar = () => {
 
   return (
     <>
-      <Navbar className="mt-5">
+      <Navbar>
         <Container fluid className="d-flex ">
           <Nav style={{ maxHeight: "100px" }} navbarScroll></Nav>
           <Container className="trasparent">
+            <Container className="logo d-flex align-items-end justify-content-around">
+              <h1 className="text-dark text-center ">Meteo Ghibli</h1>
+            </Container>
             <Form className="d-flex">
               <Form.Control
                 type="search"

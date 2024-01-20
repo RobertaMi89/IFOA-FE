@@ -5,12 +5,12 @@ const Cards = ({ cityData }) => {
   return (
     <>
       {dataExists ? (
-        <Container className="mt-5">
+        <Container className="pt-3 ">
           <Col xs={6} md={6}>
-            <p>City: {cityData.name}</p>
+            <h3 className="text-dark mb-4">{cityData.name}</h3>
           </Col>
           <Row xs={1} md={2} className="g-4">
-            <Col>
+            <Col className="d-flex justify-content-center">
               <CustomCard
                 meteoProp={{
                   name: "Wind Speed",
@@ -20,7 +20,7 @@ const Cards = ({ cityData }) => {
                 bgImg={"./src/assets/media/si-alza-il-vento.jpg"}
               />
             </Col>
-            <Col>
+            <Col className="d-flex justify-content-center">
               <CustomCard
                 meteoProp={{
                   name: "Weather",
@@ -32,7 +32,7 @@ const Cards = ({ cityData }) => {
             </Col>
           </Row>
           <Row xs={1} md={2} className="g-4">
-            <Col>
+            <Col className="d-flex justify-content-center">
               <CustomCard
                 meteoProp={{
                   name: "Humidity",
@@ -42,7 +42,7 @@ const Cards = ({ cityData }) => {
                 bgImg={"./src/assets/media/Ponyo.png"}
               />
             </Col>
-            <Col>
+            <Col className="d-flex justify-content-center">
               <CustomCard
                 meteoProp={{
                   name: "Temperature",

@@ -21,10 +21,14 @@ export const CustomCard = ({ meteoProp, bgImg }) => {
             height: "300px",
           }}
         >
-          <Card.Title>{meteoProp.name}</Card.Title>
+          <Card.Title>
+            <b>{meteoProp.name}</b>
+          </Card.Title>
+
           <Card.Text style={{ height: "50px" }}>
             <img src={meteoProp.icon}></img>
-            {meteoProp.value}
+
+            <b>{meteoProp.value}</b>
           </Card.Text>
         </Card.Body>
       </Card>

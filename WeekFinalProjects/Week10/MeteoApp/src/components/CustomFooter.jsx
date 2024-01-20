@@ -66,7 +66,7 @@ const CustomFooter = ({ cityForecast }) => {
 
   const renderLineChart = (
     <Container className="m-0 p-0 mt-2">
-      <LineChart width={1000} height={200} data={dataForecast}>
+      <LineChart width={1100} height={200} data={dataForecast}>
         <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" wi />
         <XAxis dataKey="date" />
@@ -77,10 +77,10 @@ const CustomFooter = ({ cityForecast }) => {
   );
   return (
     <>
-      <Container fluid className="mt-5">
-        <Card style={{ width: "55%" }}>
+      <Container className="mt-5 d-flex justify-content-center">
+        <Card style={{ width: "89%" }}>
           <Card.Body className="m-0 p-0">
-            <p>
+            <p className="ps-2 pt-2">
               Temperatures around{" "}
               {`${new Date().getHours()}:${new Date().getMinutes()}`} in the
               next 5 days
