@@ -1,18 +1,34 @@
 import Card from "react-bootstrap/Card";
+export const CustomCard = ({ meteoProp, bgImg }) => {
+  const backgroundImageStyle = {
+    backgroundColor: "rgba(255, 255, 255, 0.6)",
+    backgroundImage: `url(${bgImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    padding: "100px",
+    marginBottom: "20px",
+    maxHeight: "250px",
+  };
 
-export const CustomCard = ({ meteoProp }) => {
   return (
-    <>
-      <Card style={{ width: "18rem" }}>
-        <Card.Body>
+    <div style={{ width: "500px", height: "auto" }}>
+      <Card style={bgImg ? backgroundImageStyle : {}}>
+        <Card.Body
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.6)",
+            width: "100%",
+            height: "300px",
+          }}
+        >
           <Card.Title>{meteoProp.name}</Card.Title>
-          <Card.Text>
+          <Card.Text style={{ height: "50px" }}>
             <img src={meteoProp.icon}></img>
             {meteoProp.value}
           </Card.Text>
         </Card.Body>
       </Card>
-    </>
+    </div>
   );
 };
 export default CustomCard;

@@ -1,4 +1,5 @@
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/esm/Container";
 import {
   LineChart,
   Line,
@@ -64,22 +65,30 @@ const CustomFooter = ({ cityForecast }) => {
   const dataForecast = buildForecastData(cityForecast.list);
 
   const renderLineChart = (
-    <LineChart width={1300} height={400} data={dataForecast}>
-      <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" wi />
-      <XAxis dataKey="date" />
-      <YAxis />
-      <Tooltip />
-    </LineChart>
+    <Container className="m-0 p-0 mt-2">
+      <LineChart width={1000} height={200} data={dataForecast}>
+        <Line type="monotone" dataKey="temperature" stroke="#8884d8" />
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" wi />
+        <XAxis dataKey="date" />
+        <YAxis />
+        <Tooltip />
+      </LineChart>
+    </Container>
   );
   return (
     <>
-      <Card>
-        <Card.Body>
-          <p>Ciao</p>
-          {renderLineChart}
-        </Card.Body>
-      </Card>
+      <Container fluid className="mt-5">
+        <Card style={{ width: "55%" }}>
+          <Card.Body className="m-0 p-0">
+            <p>
+              Temperatures around{" "}
+              {`${new Date().getHours()}:${new Date().getMinutes()}`} in the
+              next 5 days
+            </p>
+            {renderLineChart}
+          </Card.Body>
+        </Card>
+      </Container>
     </>
   );
 };

@@ -1,7 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
-
 import CustomNavBar from "./components/molecules/CustomNavBar";
 
 export function App() {
